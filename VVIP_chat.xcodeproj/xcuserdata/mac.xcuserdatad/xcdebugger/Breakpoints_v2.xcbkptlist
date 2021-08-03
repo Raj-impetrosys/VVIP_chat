@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F1ED4D16-A72B-45DA-AE5B-961455E86ACC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16C2D501-F032-4708-8347-0E2BBE85EE1C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VVIP_chat/ViewControllers/DialViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "DialViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "16C2D501-F032-4708-8347-0E2BBE85EE1C - 601a236825b377d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VVIP_chat.DialViewController.__deallocating_deinit"
+                  moduleName = "VVIP_chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Raj/VVIP_chat/VVIP_chat/ViewControllers/DialViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "16C2D501-F032-4708-8347-0E2BBE85EE1C - 39addadbf879aad6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VVIP_chat.DialViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; VVIP_chat.DialViewController"
+                  moduleName = "VVIP_chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Raj/VVIP_chat/VVIP_chat/ViewControllers/DialViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "16C2D501-F032-4708-8347-0E2BBE85EE1C - 119ecbe80cba2e61"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VVIP_chat.DialViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; VVIP_chat.DialViewController"
+                  moduleName = "VVIP_chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Raj/VVIP_chat/VVIP_chat/ViewControllers/DialViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "441">
+               </Location>
+               <Location
+                  uuid = "16C2D501-F032-4708-8347-0E2BBE85EE1C - 9997976f6934309d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VVIP_chat.DialViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;VVIP_chat.DialViewController&gt;"
+                  moduleName = "VVIP_chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Raj/VVIP_chat/VVIP_chat/ViewControllers/DialViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "16C2D501-F032-4708-8347-0E2BBE85EE1C - 628c11f325248a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VVIP_chat.DialViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;VVIP_chat.DialViewController&gt;"
+                  moduleName = "VVIP_chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Raj/VVIP_chat/VVIP_chat/ViewControllers/DialViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "382">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
