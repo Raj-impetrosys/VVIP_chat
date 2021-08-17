@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "Nuke",
-        "repositoryURL": "https://github.com/kean/Nuke.git",
+        "package": "SocketIO",
+        "repositoryURL": "https://github.com/socketio/socket.io-client-swift.git",
         "state": {
           "branch": null,
-          "revision": "7f73ceaeacd5df75a7994cd82e165ad9ff1815db",
-          "version": "9.6.1"
+          "revision": "af5ce97b755d964235348d96f6db5cbdcbe334a5",
+          "version": "16.0.1"
         }
       },
       {
@@ -17,24 +17,6 @@
           "branch": null,
           "revision": "df8d82047f6654d8e4b655d1b1525c64e1059d21",
           "version": "4.0.4"
-        }
-      },
-      {
-        "package": "StreamChat",
-        "repositoryURL": "https://github.com/getstream/stream-chat-swift",
-        "state": {
-          "branch": "main",
-          "revision": "c91f90b768c3c2c3a553fdd70ea1f5c64e520b7d",
-          "version": null
-        }
-      },
-      {
-        "package": "SwiftyGif",
-        "repositoryURL": "https://github.com/kirualex/SwiftyGif.git",
-        "state": {
-          "branch": null,
-          "revision": "0cd770feed5807d9fd4fa8df5ad74b56b814b0c8",
-          "version": "5.4.0"
         }
       }
     ]

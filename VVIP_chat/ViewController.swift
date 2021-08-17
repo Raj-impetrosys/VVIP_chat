@@ -13,7 +13,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         navConfig()
         tabBarConfig()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     func tabBarConfig(){
@@ -61,8 +68,6 @@ class ViewController: UIViewController {
 
     @objc func ellipsisTapped(){
              print("ellipsis button click")
-        let vc = (self.storyboard?.instantiateViewController(identifier: "TabBarViewController"))! as TabBarViewController
-        self.navigationController?.pushViewController(vc, animated: true)
       }
 
 }

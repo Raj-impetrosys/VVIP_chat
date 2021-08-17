@@ -22,9 +22,22 @@
 		04081DB026B15494000E74D3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081DAF26B15494000E74D3 /* ChatViewController.swift */; };
 		04081DB526B154AC000E74D3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081DB426B154AC000E74D3 /* SettingsViewController.swift */; };
 		04081DBA26B154C5000E74D3 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081DB926B154C5000E74D3 /* FriendsViewController.swift */; };
-		04081DCD26B161E0000E74D3 /* StreamChat in Frameworks */ = {isa = PBXBuildFile; productRef = 04081DCC26B161E0000E74D3 /* StreamChat */; };
-		04081DCF26B161E0000E74D3 /* StreamChatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 04081DCE26B161E0000E74D3 /* StreamChatUI */; };
+		040B3D1B26C546C300EAB346 /* func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3D1A26C546C300EAB346 /* func.swift */; };
 		041C103626B2E69A00CAD568 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C103526B2E69A00CAD568 /* AppConfig.swift */; };
+		0423C45926C2503B003495C5 /* MessageImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423C45826C2503B003495C5 /* MessageImageCell.swift */; };
+		0423C45E26C262A6003495C5 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423C45D26C262A6003495C5 /* MessageType.swift */; };
+		04297F4726CB8A2600295510 /* MessageDocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04297F4626CB8A2600295510 /* MessageDocumentCell.swift */; };
+		04395E0626C636B6006EFA1C /* MessageContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04395E0526C636B6006EFA1C /* MessageContactCell.swift */; };
+		04395E0B26C68C62006EFA1C /* MessageLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04395E0A26C68C62006EFA1C /* MessageLocationCell.swift */; };
+		04480AAE26C3A4080059FA39 /* MessageLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480AAD26C3A4080059FA39 /* MessageLinkCell.swift */; };
+		04480AB426C3FF4A0059FA39 /* Encrypt_Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480AB326C3FF4A0059FA39 /* Encrypt_Decrypt.swift */; };
+		0457057126CA3EE100CD863F /* MessageVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457057026CA3EE100CD863F /* MessageVideoCell.swift */; };
+		0457057A26CA954D00CD863F /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0457057926CA954D00CD863F /* Photos.framework */; };
+		0464EA1426B91F1B00F6C92C /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 0464EA1326B91F1B00F6C92C /* SocketIO */; };
+		0464EA1E26B9206200F6C92C /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464EA1D26B9206200F6C92C /* MessageData.swift */; };
+		0464EA2E26B9219C00F6C92C /* MessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464EA2D26B9219C00F6C92C /* MessageViewCell.swift */; };
+		0464EA4226B9272F00F6C92C /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 0464EA4126B9272F00F6C92C /* Starscream */; };
+		0464EA5226B9417F00F6C92C /* ChatUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464EA5126B9417F00F6C92C /* ChatUserTableViewController.swift */; };
 		0499E01A26B3C90800732ED4 /* DialServerIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E01926B3C90800732ED4 /* DialServerIDViewController.swift */; };
 		0499E02226B3DA2E00732ED4 /* DialPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E02126B3DA2E00732ED4 /* DialPinViewController.swift */; };
 		0499E02A26B3DF8C00732ED4 /* DialPlayerCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E02926B3DF8C00732ED4 /* DialPlayerCodeViewController.swift */; };
@@ -70,7 +83,20 @@
 		04081DAF26B15494000E74D3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		04081DB426B154AC000E74D3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04081DB926B154C5000E74D3 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		040B3D1A26C546C300EAB346 /* func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func.swift; sourceTree = "<group>"; };
 		041C103526B2E69A00CAD568 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		0423C45826C2503B003495C5 /* MessageImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageImageCell.swift; sourceTree = "<group>"; };
+		0423C45D26C262A6003495C5 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		04297F4626CB8A2600295510 /* MessageDocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDocumentCell.swift; sourceTree = "<group>"; };
+		04395E0526C636B6006EFA1C /* MessageContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContactCell.swift; sourceTree = "<group>"; };
+		04395E0A26C68C62006EFA1C /* MessageLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLocationCell.swift; sourceTree = "<group>"; };
+		04480AAD26C3A4080059FA39 /* MessageLinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLinkCell.swift; sourceTree = "<group>"; };
+		04480AB326C3FF4A0059FA39 /* Encrypt_Decrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encrypt_Decrypt.swift; sourceTree = "<group>"; };
+		0457057026CA3EE100CD863F /* MessageVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVideoCell.swift; sourceTree = "<group>"; };
+		0457057926CA954D00CD863F /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		0464EA1D26B9206200F6C92C /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		0464EA2D26B9219C00F6C92C /* MessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewCell.swift; sourceTree = "<group>"; };
+		0464EA5126B9417F00F6C92C /* ChatUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUserTableViewController.swift; sourceTree = "<group>"; };
 		0499E01926B3C90800732ED4 /* DialServerIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialServerIDViewController.swift; sourceTree = "<group>"; };
 		0499E02126B3DA2E00732ED4 /* DialPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialPinViewController.swift; sourceTree = "<group>"; };
 		0499E02926B3DF8C00732ED4 /* DialPlayerCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialPlayerCodeViewController.swift; sourceTree = "<group>"; };
@@ -82,8 +108,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04081DCF26B161E0000E74D3 /* StreamChatUI in Frameworks */,
-				04081DCD26B161E0000E74D3 /* StreamChat in Frameworks */,
+				0457057A26CA954D00CD863F /* Photos.framework in Frameworks */,
+				0464EA1426B91F1B00F6C92C /* SocketIO in Frameworks */,
+				0464EA4226B9272F00F6C92C /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +138,7 @@
 				04081D6B26B12793000E74D3 /* VVIP_chatTests */,
 				04081D7626B12793000E74D3 /* VVIP_chatUITests */,
 				04081D5326B12791000E74D3 /* Products */,
+				0457057826CA954D00CD863F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +155,8 @@
 		04081D5426B12791000E74D3 /* VVIP_chat */ = {
 			isa = PBXGroup;
 			children = (
+				04480AB226C3FECB0059FA39 /* MessageConfig */,
+				0423C45126C24F0B003495C5 /* MessageCells */,
 				041C103426B2E68000CAD568 /* Config */,
 				04081D9126B138E6000E74D3 /* ViewControllers */,
 				04081D8B26B132C4000E74D3 /* Extensions */,
@@ -135,7 +165,6 @@
 				04081D5926B12791000E74D3 /* ViewController.swift */,
 				04081D5B26B12791000E74D3 /* Main.storyboard */,
 				04081D5E26B12793000E74D3 /* Assets.xcassets */,
-				04081D6026B12793000E74D3 /* LaunchScreen.storyboard */,
 				04081D6326B12793000E74D3 /* Info.plist */,
 			);
 			path = VVIP_chat;
@@ -146,6 +175,7 @@
 			children = (
 				04081D6C26B12793000E74D3 /* VVIP_chatTests.swift */,
 				04081D6E26B12793000E74D3 /* Info.plist */,
+				04081D6026B12793000E74D3 /* LaunchScreen.storyboard */,
 			);
 			path = VVIP_chatTests;
 			sourceTree = "<group>";
@@ -180,6 +210,7 @@
 				0499E02126B3DA2E00732ED4 /* DialPinViewController.swift */,
 				0499E02926B3DF8C00732ED4 /* DialPlayerCodeViewController.swift */,
 				0499E02E26B3E20700732ED4 /* DialPasswordViewController.swift */,
+				0464EA5126B9417F00F6C92C /* ChatUserTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,8 +219,41 @@
 			isa = PBXGroup;
 			children = (
 				041C103526B2E69A00CAD568 /* AppConfig.swift */,
+				040B3D1A26C546C300EAB346 /* func.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		0423C45126C24F0B003495C5 /* MessageCells */ = {
+			isa = PBXGroup;
+			children = (
+				0464EA2D26B9219C00F6C92C /* MessageViewCell.swift */,
+				0423C45826C2503B003495C5 /* MessageImageCell.swift */,
+				04480AAD26C3A4080059FA39 /* MessageLinkCell.swift */,
+				04395E0526C636B6006EFA1C /* MessageContactCell.swift */,
+				04395E0A26C68C62006EFA1C /* MessageLocationCell.swift */,
+				0457057026CA3EE100CD863F /* MessageVideoCell.swift */,
+				04297F4626CB8A2600295510 /* MessageDocumentCell.swift */,
+			);
+			path = MessageCells;
+			sourceTree = "<group>";
+		};
+		04480AB226C3FECB0059FA39 /* MessageConfig */ = {
+			isa = PBXGroup;
+			children = (
+				0464EA1D26B9206200F6C92C /* MessageData.swift */,
+				0423C45D26C262A6003495C5 /* MessageType.swift */,
+				04480AB326C3FF4A0059FA39 /* Encrypt_Decrypt.swift */,
+			);
+			path = MessageConfig;
+			sourceTree = "<group>";
+		};
+		0457057826CA954D00CD863F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0457057926CA954D00CD863F /* Photos.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +273,8 @@
 			);
 			name = VVIP_chat;
 			packageProductDependencies = (
-				04081DCC26B161E0000E74D3 /* StreamChat */,
-				04081DCE26B161E0000E74D3 /* StreamChatUI */,
+				0464EA1326B91F1B00F6C92C /* SocketIO */,
+				0464EA4126B9272F00F6C92C /* Starscream */,
 			);
 			productName = VVIP_chat;
 			productReference = 04081D5226B12791000E74D3 /* VVIP_chat.app */;
@@ -284,7 +348,8 @@
 			);
 			mainGroup = 04081D4926B12791000E74D3;
 			packageReferences = (
-				04081DCB26B161E0000E74D3 /* XCRemoteSwiftPackageReference "stream-chat-swift" */,
+				0464EA1226B91F1B00F6C92C /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+				0464EA4026B9272F00F6C92C /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = 04081D5326B12791000E74D3 /* Products */;
 			projectDirPath = "";
@@ -329,18 +394,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0464EA2E26B9219C00F6C92C /* MessageViewCell.swift in Sources */,
 				0499E02226B3DA2E00732ED4 /* DialPinViewController.swift in Sources */,
 				04081DA626B15478000E74D3 /* CallViewController.swift in Sources */,
+				0423C45E26C262A6003495C5 /* MessageType.swift in Sources */,
 				04081D5A26B12791000E74D3 /* ViewController.swift in Sources */,
 				041C103626B2E69A00CAD568 /* AppConfig.swift in Sources */,
+				04395E0B26C68C62006EFA1C /* MessageLocationCell.swift in Sources */,
 				04081DB026B15494000E74D3 /* ChatViewController.swift in Sources */,
+				040B3D1B26C546C300EAB346 /* func.swift in Sources */,
 				0499E01A26B3C90800732ED4 /* DialServerIDViewController.swift in Sources */,
+				0423C45926C2503B003495C5 /* MessageImageCell.swift in Sources */,
+				0464EA5226B9417F00F6C92C /* ChatUserTableViewController.swift in Sources */,
 				04081DAB26B15487000E74D3 /* DialViewController.swift in Sources */,
 				04081D5626B12791000E74D3 /* AppDelegate.swift in Sources */,
 				04081D5826B12791000E74D3 /* SceneDelegate.swift in Sources */,
+				04480AB426C3FF4A0059FA39 /* Encrypt_Decrypt.swift in Sources */,
+				04480AAE26C3A4080059FA39 /* MessageLinkCell.swift in Sources */,
 				04081DBA26B154C5000E74D3 /* FriendsViewController.swift in Sources */,
 				04081D9B26B139D4000E74D3 /* TabBarViewController.swift in Sources */,
+				0457057126CA3EE100CD863F /* MessageVideoCell.swift in Sources */,
+				04297F4726CB8A2600295510 /* MessageDocumentCell.swift in Sources */,
 				04081D8D26B132E8000E74D3 /* Extensions.swift in Sources */,
+				0464EA1E26B9206200F6C92C /* MessageData.swift in Sources */,
+				04395E0626C636B6006EFA1C /* MessageContactCell.swift in Sources */,
 				0499E02A26B3DF8C00732ED4 /* DialPlayerCodeViewController.swift in Sources */,
 				04081DB526B154AC000E74D3 /* SettingsViewController.swift in Sources */,
 				0499E02F26B3E20700732ED4 /* DialPasswordViewController.swift in Sources */,
@@ -672,26 +749,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		04081DCB26B161E0000E74D3 /* XCRemoteSwiftPackageReference "stream-chat-swift" */ = {
+		0464EA1226B91F1B00F6C92C /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getstream/stream-chat-swift";
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 16.0.1;
+			};
+		};
+		0464EA4026B9272F00F6C92C /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		04081DCC26B161E0000E74D3 /* StreamChat */ = {
+		0464EA1326B91F1B00F6C92C /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 04081DCB26B161E0000E74D3 /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
-			productName = StreamChat;
+			package = 0464EA1226B91F1B00F6C92C /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
 		};
-		04081DCE26B161E0000E74D3 /* StreamChatUI */ = {
+		0464EA4126B9272F00F6C92C /* Starscream */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 04081DCB26B161E0000E74D3 /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
-			productName = StreamChatUI;
+			package = 0464EA4026B9272F00F6C92C /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

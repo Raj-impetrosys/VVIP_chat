@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
+import CoreLocation
+import UniformTypeIdentifiers
 
 extension UIImage {
-
 
 func rotate(_ radians: CGFloat) -> UIImage {
     let cgImage = self.cgImage!
@@ -67,3 +68,88 @@ public extension UIView {
         set { layer.cornerRadius = newValue }
     }
 }
+
+extension UIView {
+    func bindToKeyboard(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+
+    @objc func keyboardWillChange(_ notification: NSNotification){
+        let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
+        let beginningFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        let endFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+
+        let deltaY = endFrame.origin.y - beginningFrame.origin.y
+
+        UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions(rawValue: curve), animations: {
+            self.frame.origin.y += deltaY
+        }, completion: nil)
+    }
+}
+
+extension UTType {
+    // Word documents are not an existing property on UTType
+    static var doc: UTType {
+        utType(ext: "doc")
+    }
+    
+    static var docs: UTType {
+        utType(ext: "docs")
+    }
+    
+    static var docx: UTType {
+        utType(ext: "docx")
+    }
+    
+    static var mp4: UTType {
+        utType(ext: "mp4")
+    }
+}
+
+func utType(ext: String) -> UTType{
+   return UTType.types(tag: ext, tagClass: .filenameExtension, conformingTo: nil).first!
+}
+
+extension UITableView {
+
+    func scrollToBottom(){
+
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(
+                row: self.numberOfRows(inSection:  self.numberOfSections-1) - 1,
+                section: self.numberOfSections - 1)
+            if self.hasRowAtIndexPath(indexPath: indexPath) {
+                self.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            }
+        }
+    }
+
+    func scrollToTop() {
+
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: 0, section: 0)
+            if self.hasRowAtIndexPath(indexPath: indexPath) {
+                self.scrollToRow(at: indexPath, at: .top, animated: true)
+           }
+        }
+    }
+
+    func hasRowAtIndexPath(indexPath: IndexPath) -> Bool {
+        return indexPath.section < self.numberOfSections && indexPath.row < self.numberOfRows(inSection: indexPath.section)
+    }
+}
+
+//extension ChatViewController : CLLocationManagerDelegate {
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        if let location = locations.first {
+//            print("Location data received.")
+//            print(location)
+//            let alert = UIAlertController(title: "Picked location", message: "\(location)", preferredStyle: .alert)
+//            present(alert, animated: true, completion: nil)
+//        }
+//    }
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        print("Failed to get users location.")
+//    }
+//}

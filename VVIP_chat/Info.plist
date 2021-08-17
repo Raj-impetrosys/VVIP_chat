@@ -64,5 +64,37 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>VVIP app want to access your location</string>
+	<key>NSContactsUsageDescription</key>
+	<string>VVIP app want to access your contacts</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tel</string>
+		<string>telprompt</string>
+	</array>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>VVIP app want to access media files</string>
+	<key>com.apple.private.tcc.manager</key>
+	<true/>
+	<key>com.apple.rootless.storage.TCC</key>
+	<true/>
+	<key>com.apple.photos</key>
+	<true/>
+	<key>NSLocalizedDescription</key>
+	<string>VVIP want to access your videos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app wants to take picturs, videos</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app wants to record sound</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app wants to save picturs, videos to your library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app wants to use photos and videos</string>
 </dict>
 </plist>

@@ -6,20 +6,67 @@
 //
 
 import UIKit
-import StreamChat
+//import StreamChat
 
-extension ChatClient {
-    static var shared: ChatClient!
-}
+//extension ChatClient {
+//    static var shared: ChatClient!
+//}
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print("application launched")
+        keyConfig()
         return true
+    }
+    
+    private func keyConfig(){
+        let myprivateKey = generatePrivateKey()
+        let otherprivateKey = generatePrivateKey()
+
+        let mypublicKey = myprivateKey.publicKey
+        let otherpublicKey = otherprivateKey.publicKey
+
+        print("myprivateKey: \(myprivateKey)")
+        print("otherprivateKey: \(otherprivateKey)")
+        print("mypublicKey: \(mypublicKey)")
+        print("ckpublicKey: \(otherpublicKey)")
+//
+        let myexportedPrivateKey = exportPrivateKey(myprivateKey)
+        let otherexportedPrivateKey = exportPrivateKey(otherprivateKey)
+//
+////        Constants._privateKey = rkprivateKey
+        saveData(key: "myprivateKey", data: myexportedPrivateKey)
+        saveData(key: "otherprivateKey", data: otherexportedPrivateKey)
+//
+//        print("myexportedPrivateKey: \(myexportedPrivateKey)")
+//        print("otherexportedPrivateKey: \(otherexportedPrivateKey)")
+//
+//        do{
+//            let myimportPrivateKey = try importPrivateKey(myexportedPrivateKey)
+//            let otherimportPrivateKey = try importPrivateKey(otherexportedPrivateKey)
+//            print("myimportPrivateKey: \(myimportPrivateKey)")
+//            print("otherimportPrivateKey: \(otherimportPrivateKey)")
+//        } catch let e{
+//            print("Could not imported PrivateKey: \(e.localizedDescription)")
+//        }
+//
+//        var encryptedMessage: String = ""
+//        do{
+//            let mysymmetricKey = try deriveSymmetricKey(privateKey: myprivateKey, publicKey: otherpublicKey)
+//            let othersymmetricKey = try deriveSymmetricKey(privateKey: otherprivateKey, publicKey: mypublicKey)
+//
+//            encryptedMessage = try encrypt(text: "this is rk", symmetricKey: mysymmetricKey)
+//            print("encryptedMessage: \(encryptedMessage)")
+//
+//            let decryptedMessage = decrypt(text: encryptedMessage, symmetricKey: othersymmetricKey)
+//            print("decryptedMessage: \(decryptedMessage)")
+////            alert(title: encryptedMessage, msg: decryptedMessage)
+//        } catch let e{
+//            print("Could not imported symmetricKey: \(e.localizedDescription)")
+//        }
     }
 
     // MARK: UISceneSession Lifecycle
@@ -35,7 +82,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
 
 }
 
