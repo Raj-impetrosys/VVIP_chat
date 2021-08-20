@@ -11,7 +11,6 @@ class MessageLinkCell: UITableViewCell {
 
     @IBOutlet weak var messageBackgroundView: UIView!
     @IBOutlet weak var messageLink: UILabel!
-//    @IBOutlet weak var msgImage: UIImageView!
     var trailingConstraint : NSLayoutConstraint!
     var leadingConstrint : NSLayoutConstraint!
     var chatGray = UIColor(red: 69/255.0, green: 90/255.0, blue: 100/255.0, alpha: 1)
@@ -29,25 +28,6 @@ class MessageLinkCell: UITableViewCell {
         super.awakeFromNib()
         messageLink?.isUserInteractionEnabled = true
         messageLink?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(linkTapped(_:))))
-        print("awake from nib")
-    }
-    
-    private func linkConfig(){
-//        let attributedString = NSMutableAttributedString(string: "The site is www.google.com.")
-//        let linkRange = (attributedString.string as NSString).range(of: "www.google.com")
-//        attributedString.addAttribute(NSAttributedString.Key.link, value: "https://www.google.com", range: linkRange)
-//        let linkAttributes: [NSAttributedString.Key : Any] = [
-//            NSAttributedString.Key.foregroundColor: UIColor.green,
-//            NSAttributedString.Key.underlineColor: UIColor.lightGray,
-//            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
-//        ]
-//
-//        // textView is a UITextView
-////        textView.linkTextAttributes = linkAttributes
-////        textView.attributedText = attributedString
-//
-//        messageLink.attributedText = attributedString
-//        url = URL(string: String(ChatViewController().getLink(text: String)))
     }
     
     @objc func linkTapped(_ sender: UITapGestureRecognizer) {

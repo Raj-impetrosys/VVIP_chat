@@ -10,7 +10,6 @@ import UIKit
 class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var messageBackgroundView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-//    @IBOutlet weak var msgImage: UIImageView!
     var trailingConstraint : NSLayoutConstraint!
     var leadingConstrint : NSLayoutConstraint!
     var chatGray = UIColor(red: 69/255.0, green: 90/255.0, blue: 100/255.0, alpha: 1)
@@ -27,10 +26,10 @@ class MessageTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-//        print("selected: \(selected)")
+        //        print("selected: \(selected)")
         // Configure the view for the selected state
         if(selected){
             contentView.backgroundColor = #colorLiteral(red: 0.1072840765, green: 0.1896482706, blue: 0.3115866184, alpha: 1).withAlphaComponent(0.8)
@@ -46,18 +45,6 @@ class MessageTableViewCell: UITableViewCell {
         trailingConstraint = messageBackgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         leadingConstrint = messageBackgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
         messageLabel.text = message.text
-//        if(message.image != nil){
-////            msgImage.isHidden = false
-//            let image: UIImage = message.image!
-//            let imageView: UIImageView = UIImageView(frame:CGRect(x: 0, y: 0, width: 400, height: 300));
-//            imageView.image = image
-//            imageView.tag = 100
-////            msgImage.image = image
-//            messageBackgroundView.addSubview(imageView)
-//        } else {
-////            msgImage.isHidden = true
-//            self.viewWithTag(100)?.removeFromSuperview()
-//        }
         if(message.isFirstUser){
             messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1)
             trailingConstraint.isActive = true
@@ -68,5 +55,4 @@ class MessageTableViewCell: UITableViewCell {
             messageLabel.textAlignment = .left
         }
     }
-
 }

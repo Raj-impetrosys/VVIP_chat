@@ -9,13 +9,11 @@ import UIKit
 
 class MessageVideoCell: UITableViewCell {
 
-    //    var delegate: myTableDelegate?
         weak var delegate:ChatViewControllerDelegate?
     var url: URL!
 
         @IBOutlet weak var messageBackgroundView: UIView!
         @IBOutlet weak var messageImage: UIImageView!
-    //    @IBOutlet weak var msgImage: UIImageView!
         var trailingConstraint : NSLayoutConstraint!
         var leadingConstrint : NSLayoutConstraint!
         var chatGray = UIColor(red: 69/255.0, green: 90/255.0, blue: 100/255.0, alpha: 1)
@@ -31,14 +29,8 @@ class MessageVideoCell: UITableViewCell {
         override func awakeFromNib() {
             super.awakeFromNib()
             messageImage?.isUserInteractionEnabled = true
-    //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapEdit))
-    //        tapGesture.delegate = self
-    //        tapGesture.numberOfTapsRequired = 1
-    //        addGestureRecognizer(tapGesture)
-    //        imageView?.addGestureRecognizer(tapGesture)
             messageImage!.isUserInteractionEnabled = true
             messageImage!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(videoTapped(_:))))
-            print("awake from nib")
         }
         
         @objc func videoTapped(_ sender: UITapGestureRecognizer) {

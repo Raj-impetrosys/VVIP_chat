@@ -140,6 +140,24 @@ extension UITableView {
     }
 }
 
+extension UIView {
+   func callRecursively(_ body: (_ subview: UIView) -> Void) {
+      body(self)
+      subviews.forEach { $0.callRecursively(body) }
+   }
+}
+
+extension UIAlertController {
+   func fixConstraints() -> UIAlertController {
+    view.callRecursively { subview in
+         subview.constraints
+            .filter({ $0.constant == -16 })
+            .forEach({ $0.priority = UILayoutPriority(rawValue: 999)})
+    }
+    return self
+    }
+}
+
 //extension ChatViewController : CLLocationManagerDelegate {
 //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //        if let location = locations.first {

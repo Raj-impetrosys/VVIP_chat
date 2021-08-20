@@ -33,7 +33,6 @@ class MessageLocationCell: UITableViewCell {
             super.awakeFromNib()
             messageLocationView!.isUserInteractionEnabled = true
             messageLocationView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(locationTapped(_:))))
-            print("awake from nib")
         }
     
     private func locationConfig(location: CLLocation){

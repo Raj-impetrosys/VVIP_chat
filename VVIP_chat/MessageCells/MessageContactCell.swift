@@ -31,7 +31,6 @@ class MessageContactCell: UITableViewCell {
         super.awakeFromNib()
         messageBackgroundView?.isUserInteractionEnabled = true
         messageBackgroundView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(contactTapped(_:))))
-        print("awake from nib")
     }
     
     @objc func contactTapped(_ sender: UITapGestureRecognizer) {
@@ -78,8 +77,8 @@ class MessageContactCell: UITableViewCell {
         if(message.contact!.phones!.count > 0){
             let contact: String = message.contact!.phones![0].trimmingCharacters(in: .whitespaces).replacingOccurrences(of: " ", with: "")
             url = URL(string: "telprompt://\(contact)")
-            print(contact.trimmingCharacters(in: .whitespaces))
-            print(url as Any)
+//            print(contact.trimmingCharacters(in: .whitespaces))
+//            print(url as Any)
         }
         contactImageView.image = message.contact?.image
         //        url = URL(string: String(ChatViewController().getLink(text: message.text)!))!

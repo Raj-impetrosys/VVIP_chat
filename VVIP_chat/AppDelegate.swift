@@ -26,13 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myprivateKey = generatePrivateKey()
         let otherprivateKey = generatePrivateKey()
 
-        let mypublicKey = myprivateKey.publicKey
-        let otherpublicKey = otherprivateKey.publicKey
+//        let mypublicKey = myprivateKey.publicKey
+//        let otherpublicKey = otherprivateKey.publicKey
 
-        print("myprivateKey: \(myprivateKey)")
-        print("otherprivateKey: \(otherprivateKey)")
-        print("mypublicKey: \(mypublicKey)")
-        print("ckpublicKey: \(otherpublicKey)")
+//        print("myprivateKey: \(myprivateKey)")
+//        print("otherprivateKey: \(otherprivateKey)")
+//        print("mypublicKey: \(mypublicKey)")
+//        print("ckpublicKey: \(otherpublicKey)")
 //
         let myexportedPrivateKey = exportPrivateKey(myprivateKey)
         let otherexportedPrivateKey = exportPrivateKey(otherprivateKey)

@@ -29,10 +29,9 @@ protocol ChatViewControllerDelegate:class {
 
 extension ChatViewController: ChatViewControllerDelegate{
     func docTaped(url: URL) {
-        print("url.........")
-        let urlFile = url
+        print(url)
         var documentInteractionController: UIDocumentInteractionController!
-        documentInteractionController = UIDocumentInteractionController.init(url: urlFile)
+        documentInteractionController = UIDocumentInteractionController.init(url: url)
         documentInteractionController?.delegate = self
         documentInteractionController?.presentPreview(animated: true)
     }
@@ -75,7 +74,7 @@ extension ChatViewController: ChatViewControllerDelegate{
     }
 }
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, WebSocketDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate & UIDocumentPickerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, MPMediaPickerControllerDelegate, UIDocumentInteractionControllerDelegate {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, WebSocketDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate & UIDocumentPickerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, MPMediaPickerControllerDelegate, UIDocumentInteractionControllerDelegate, AVAudioRecorderDelegate {
     
     @IBOutlet weak var messageTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
@@ -113,8 +112,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     var messages: [MessageData] = [
         MessageData(text: "Hey", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
         MessageData(text: "Hello", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "I am Raj from India, working as a Flutter and IOS developer at Impetrosys", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "okay, I am jack from US", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
+        MessageData(text: "I am Raj from India, working as a Flutter and IOS developer at Impetrosys, my location is:", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
+        MessageData(text: "Apollo premier", isFirstUser: true, image: nil, contact: nil, location: CLLocation(latitude: 22.749929207689632, longitude: 75.89680790621576), document: nil, messageType: .location),
+        MessageData(text: "okay, I am jack from US, this is my location", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
+        MessageData(text: "impetrosys location", isFirstUser: false, image: nil, contact: nil, location: CLLocation(latitude: 22.717652352004368, longitude: 75.87711553958752), document: nil, messageType: .location),
         MessageData(text: "Okay", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
         MessageData(text: "Raj can we meet somewhere to discuss about the project detail", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
         MessageData(text: "Off-course jack we can meet at ICH so that we can discuss", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
@@ -123,14 +124,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         MessageData(text: "yup i'll", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
         MessageData(text: "Okay thanks", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
         MessageData(text: "photo", isFirstUser: false, image: imageData(image: UIImage(named: "nature"), url: nil), contact: nil, location: nil, document: nil, messageType: .image),
-        MessageData(text: "https://www.google.com", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .link),
+        MessageData(text: "https://www.google.com", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .link),
         MessageData(text: "Raj", isFirstUser: true, image: nil, contact: ContactData(phones: ["9977783414", "8819896489"], image: UIImage(named:"person")), location: nil, document: nil, messageType: .contact),
         MessageData(text: "Stark", isFirstUser: false, image: nil, contact: ContactData(phones: ["(997)7783414"], image: UIImage(named:"person")), location: nil, document: nil, messageType: .contact),
-        MessageData(text: "Kate Bell", isFirstUser: true, image: nil, contact: ContactData(phones: ["(555)564-8583", "(415) 555-3695"], image: UIImage(named:"nature")), location: nil, document: nil, messageType: .contact),
-        MessageData(text: "impetrosys location", isFirstUser: false, image: nil, contact: nil, location: CLLocation(latitude: 22.717652352004368, longitude: 75.87711553958752), document: nil, messageType: .location),
-        MessageData(text: "tajmahal location", isFirstUser: true, image: nil, contact: nil, location: CLLocation(latitude: 27.175307039887215, longitude: 78.0421207396789), document: nil, messageType: .location),
-        MessageData(text: "Apollo premier", isFirstUser: true, image: nil, contact: nil, location: CLLocation(latitude: 22.749929207689632, longitude: 75.89680790621576), document: nil, messageType: .location),
-        MessageData(text: "BigBuckBunny", isFirstUser: false, image: imageData(image: generateThumbnail1(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!), url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")), contact: nil, location: nil, document: nil, messageType: .video),
+        MessageData(text: "BigBuckBunny", isFirstUser: true, image: imageData(image: generateThumbnail1(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!), url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")), contact: nil, location: nil, document: nil, messageType: .video),
         MessageData(text: "file-sample_100kB.doc", isFirstUser: false, image: nil, contact: nil, location: nil, document: URL(string: "file:///Users/mac/Library/Developer/CoreSimulator/Devices/2254DE57-ED46-408F-B200-8E6F31D288CD/data/Containers/Shared/AppGroup/513519F3-7C21-4C4F-918F-06920BA51E0E/File%20Provider%20Storage/Downloads/file-sample_100kB.doc"), messageType: .document),
     ]
     
@@ -349,17 +346,17 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         soc = manager.defaultSocket
         print(manager.status)
         
-                soc.connect()
+        soc.connect()
         
-                soc.on(clientEvent: .connect) {data, ack in
-                    print("socket connected")
-                    self.isConnected = true
-                }
+        soc.on(clientEvent: .connect) {data, ack in
+            print("socket connected")
+            self.isConnected = true
+        }
         
-                soc.on(clientEvent: .disconnect) {data, ack in
-                    print("socket disconnected")
-                    self.isConnected = false
-                }
+        soc.on(clientEvent: .disconnect) {data, ack in
+            print("socket disconnected")
+            self.isConnected = false
+        }
         
     }
     
@@ -513,7 +510,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let popover = alert.popoverPresentationController
         popover?.sourceRect = CGRect(x: self.view.bounds.maxX, y: self.view.bounds.maxY, width: 0, height: 0)
         popover?.sourceView = self.view
-        present(alert, animated: true)
+        present(alert.fixConstraints(), animated: true)
         
     }
     
@@ -551,7 +548,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print(picker.mediaTypes)
         //        let phPicker = PHPickerViewController()
-//        var url:String?
+        //        var url:String?
         var filename:String?
         switch picker.mediaTypes.first{
         case "public.movie":
@@ -559,7 +556,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             let videoURL = info[UIImagePickerController.InfoKey.referenceURL] as? URL
             print(videoURL as Any)
             path = videoURL
-//            url = videoURL!.path
+            //            url = videoURL!.path
             print(path!)
             let thumbnail = generateThumbnail1(url: videoURL!)
             print(thumbnail!)
@@ -579,7 +576,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             pickedImage = image
             messageType = .image
             path = imageURL as URL
-//            url = imageURL.path
+            //            url = imageURL.path
             filename = imageURL.lastPathComponent
             
         default:
@@ -645,10 +642,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         )
         
-        let popover = alert.popoverPresentationController
-        popover?.sourceRect = CGRect(x: self.view.bounds.maxX, y: self.view.bounds.maxY, width: 0, height: 0)
-        popover?.sourceView = self.view
-        present(alert, animated: true)
+                let popover = alert.popoverPresentationController
+                popover?.sourceRect = CGRect(x: self.view.bounds.maxX, y: self.view.bounds.maxY, width: 0, height: 0)
+                popover?.sourceView = self.view
+        present(alert.fixConstraints(), animated: true)
     }
     
     func selectVideo() {
@@ -710,7 +707,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 (contact, stop) in
                 // Array containing all unified contacts from everywhere
                 contacts.append(contact)
-                print(contact.givenName)
+//                print(contact.givenName)
             }
             self.showContactList(contacts: contacts)
         }
@@ -731,11 +728,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 guard let label = phoneNumber.label, validTypes.contains(label) else { return nil }
                 return phoneNumber.value.stringValue
             }
-            print("numbers...........:\(numbers)")
             alert.addAction(.init(title: contact.givenName + " " + contact.familyName, style: .default){_ in
                 if (contact.imageDataAvailable){
                     self.pickedContactImage = UIImage(data: contact.imageData!)
-                    print("image................: \(String(describing: self.pickedContactImage))")
+                    //                    print("image................: \(String(describing: self.pickedContactImage))")
                 } else {
                     self.pickedContactImage = UIImage(named: "person")
                 }
@@ -745,7 +741,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.messageType = .contact
             })
         }
-        present(alert, animated: true, completion: nil)
+        let popover = alert.popoverPresentationController
+        popover?.sourceRect = CGRect(x: self.view.bounds.maxX, y: self.view.bounds.maxY, width: 0, height: 0)
+        popover?.sourceView = self.view
+        present(alert.fixConstraints(), animated: true, completion: nil)
     }
     
     private func getLocation(){
@@ -763,7 +762,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("Location data received.")
             print(location)
             self.pickedLocation = location
-            //            MessageLocationCell().location = location
             let alert = UIAlertController(title: "Picked location", message: "\(location)", preferredStyle: .alert)
             alert.addAction(.init(title: "OK", style: .cancel))
             present(alert, animated: true, completion: nil)
@@ -837,13 +835,129 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
-        print("view was cancelled")
+        print("document picker cancelled")
         dismiss(animated: true, completion: nil)
     }
     
+    let recordView = UIView(frame: CGRect(x: 50, y: 0, width: 300, height: 60))
+    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 60))
+
+    private func recordViewConfig(){
+        label.textAlignment = .center
+        label.text = "Recording...: "+audioRecorder.currentTime.description
+        recordView.addSubview(label)
+        recordView.backgroundColor = .red
+        textField.isHidden = true
+        camera.isHidden = true
+        attachment.isHidden = true
+        hstack.addArrangedSubview(label)
+    }
+    
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
+    
     @objc func micTapped(){
         print("mic tapped")
+        var obs: NSKeyValueObservation?
+        recordingSession = AVAudioSession.sharedInstance()
+        obs = recordingSession.observe(\.outputVolume) { (av, change) in
+                print("volume \(av.outputVolume)")
+            print(av)
+            print(change)
+            self.label.text = "\(change)"
+        }
+        print(obs ?? "observe")
+        
+        do {
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() {allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+                        print("recording start")
+                        if self.audioRecorder == nil {
+                            self.startRecording()
+                            self.recordViewConfig()
+                        } else {
+                            self.finishRecording(success: true)
+                        }
+                    } else {
+                        // failed to record!
+                        print("not allowed")
+                    }
+                }
+            }
+        } catch {
+            // failed to record!
+            print("recording failed")
+        }
     }
+    
+    func startRecording() {
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording_\(Date()).m4a")
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder.delegate = self
+            audioRecorder.record()
+            print(audioRecorder.currentTime)
+            mic.image = UIImage(systemName: "stop.fill")
+        } catch {
+            finishRecording(success: false)
+            print("finish")
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func finishRecording(success: Bool) {
+        audioRecorder.stop()
+        audioRecorder = nil
+        
+        if success {
+            mic.image = UIImage(systemName: "mic.fill")
+            print("success")
+            label.removeFromSuperview()
+            textField.isHidden = false
+            camera.isHidden = false
+            attachment.isHidden = false
+            //                recordButton.setTitle("Tap to Re-record", for: .normal)
+        } else {
+            //                recordButton.setTitle("Tap to Record", for: .normal)
+            // recording failed :(
+            mic.image = UIImage(systemName: "mic.fill")
+
+            print("recording failed")
+        }
+    }
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            //            micTapped.finishRecording(success: false)
+            print("finish")
+            finishRecording(success: false)
+        }
+        print(recorder.url)
+        path = recorder.url
+        self.textField.text = recorder.url.lastPathComponent
+        self.send.isHidden = false
+        messageType = .document
+    }
+    
+    func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
+        print(error!)
+    }
+    
     
     public func getLink(text: String) -> String?{
         let input = text
@@ -855,7 +969,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             guard let range = Range(match.range, in: input) else { continue }
             url = String(input[range])
             self.messageType = .link
-            print("link url: \(url)")
+            //            print("link url: \(url)")
         }
         return url
     }
@@ -865,7 +979,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         //        if(!messageText.isEmpty && isConnected){
         if(!messageText.isEmpty){
             //check if entered text is a link
-            _ = getLink(text: messageText)
+                        _ = getLink(text: messageText)
             
             let msg = MessageData(text: messageText, isFirstUser: true, image: imageData(image: pickedImage, url: path), contact: pickedContact,location: pickedLocation, document: path, messageType: messageType)
             
@@ -951,7 +1065,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func titleConfig(){
-        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
         
         let logo = UIImage(named: "person")
         let imageView = UIImageView(image:logo)
@@ -1061,42 +1175,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedMessage = indexPath.row
         //                print("selected item \(indexPath.row)")
-        
-        //         vc = storyboard?.instantiateViewController(withIdentifier: "DrawerViewController") as! DrawerViewController
-        //        switch messages[indexPath.row].messageType {
-        //        case .image:
-        ////            print("selected item \(indexPath.row)")
-        ////            ImageViewController().image = messages[indexPath.row].image
-        ////            let vc = self.storyboard?.instantiateViewController(identifier: <#T##String#>)
-        ////            ImageViewController().image = messages[indexPath.row].image
-        ////            let vc = (self.storyboard?.instantiateViewController(identifier: "ImageViewController"))! as ImageViewController
-        ////            vc.image = messages[indexPath.row].image
-        //            let vc = ImageViewController()
-        ////            self.navigationController?.pushViewController(vc, animated: false)
-        //            present(vc, animated: true, completion: nil)
-        //        //            vc = storyboard?.instantiateViewController(withIdentifier: "DrawerViewController") as! DrawerViewController
-        ////        case 1:
-        ////            print("selected item \(indexPath.row)")
-        ////        //            vc = storyboard?.instantiateViewController(withIdentifier: "AddUserViewController") as! AddUserViewController
-        ////        case 3:
-        ////            print("selected item \(indexPath.row)")
-        ////        //            vc = storyboard?.instantiateViewController(withIdentifier: "SettingDialViewController") as! SettingDialViewController
-        ////        case 4:
-        ////            print("selected item \(indexPath.row)")
-        //        //            vc = storyboard?.instantiateViewController(withIdentifier: "StreamChatViewController")
-        //        default:
-        //            print("selected item \(indexPath.row)")
-        //        //            vc = storyboard?.instantiateViewController(withIdentifier: "AddUserViewController") as! AddUserViewController
-        //        }
-        
-        //        dismiss(animated: true, completion: nil)
-        ////        let vc1 = storyboard?.instantiateViewController(withIdentifier: "AddUserViewController") as! vc
-        //        if(indexPath.row != 0){
-        //            self.navigationController?.pushViewController(vc!, animated: false)
-        //        } else {
-        //            dismiss(animated: true)
-        //        }
-        
     }
     
 }
