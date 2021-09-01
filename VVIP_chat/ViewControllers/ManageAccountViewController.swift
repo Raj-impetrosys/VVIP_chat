@@ -25,9 +25,8 @@ class ManageAccountViewController: UIViewController {
     }
     
     private func textFieldConfig(){
-        textField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
-        textField1.attributedPlaceholder = NSAttributedString(string: "Re-Enter Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
-        
+        placeholderText(field: textField, text: "Password")
+        placeholderText(field: textField1, text: "Re-Enter Password")
         lockBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showTapped)))
         lockBtn1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(show1Tapped)))
     }

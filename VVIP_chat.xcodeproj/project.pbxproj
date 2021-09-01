@@ -23,6 +23,7 @@
 		04081DB526B154AC000E74D3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081DB426B154AC000E74D3 /* SettingsViewController.swift */; };
 		04081DBA26B154C5000E74D3 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081DB926B154C5000E74D3 /* FriendsViewController.swift */; };
 		040B3D1B26C546C300EAB346 /* func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3D1A26C546C300EAB346 /* func.swift */; };
+		040C214226DE178300A042C8 /* ChatUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C214126DE178300A042C8 /* ChatUserProfileViewController.swift */; };
 		041C103626B2E69A00CAD568 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C103526B2E69A00CAD568 /* AppConfig.swift */; };
 		0423C45926C2503B003495C5 /* MessageImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423C45826C2503B003495C5 /* MessageImageCell.swift */; };
 		0423C45E26C262A6003495C5 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423C45D26C262A6003495C5 /* MessageType.swift */; };
@@ -45,6 +46,9 @@
 		0499E02226B3DA2E00732ED4 /* DialPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E02126B3DA2E00732ED4 /* DialPinViewController.swift */; };
 		0499E02A26B3DF8C00732ED4 /* DialPlayerCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E02926B3DF8C00732ED4 /* DialPlayerCodeViewController.swift */; };
 		0499E02F26B3E20700732ED4 /* DialPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E02E26B3E20700732ED4 /* DialPasswordViewController.swift */; };
+		04DF1F5C26CF807200D7031E /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1F5B26CF807200D7031E /* AboutUsViewController.swift */; };
+		04DF1F6126CF81F000D7031E /* AppearenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1F6026CF81F000D7031E /* AppearenceViewController.swift */; };
+		04DF1F6626CF933200D7031E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1F6526CF933200D7031E /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,7 @@
 		04081DB426B154AC000E74D3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04081DB926B154C5000E74D3 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		040B3D1A26C546C300EAB346 /* func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func.swift; sourceTree = "<group>"; };
+		040C214126DE178300A042C8 /* ChatUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUserProfileViewController.swift; sourceTree = "<group>"; };
 		041C103526B2E69A00CAD568 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		0423C45826C2503B003495C5 /* MessageImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageImageCell.swift; sourceTree = "<group>"; };
 		0423C45D26C262A6003495C5 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
@@ -107,6 +112,9 @@
 		0499E02126B3DA2E00732ED4 /* DialPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialPinViewController.swift; sourceTree = "<group>"; };
 		0499E02926B3DF8C00732ED4 /* DialPlayerCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialPlayerCodeViewController.swift; sourceTree = "<group>"; };
 		0499E02E26B3E20700732ED4 /* DialPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialPasswordViewController.swift; sourceTree = "<group>"; };
+		04DF1F5B26CF807200D7031E /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		04DF1F6026CF81F000D7031E /* AppearenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceViewController.swift; sourceTree = "<group>"; };
+		04DF1F6526CF933200D7031E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +228,10 @@
 				0441E97426CE52CD0054A0CD /* ManageAccountViewController.swift */,
 				0441E97926CE72E60054A0CD /* PrivacyAndSecuritiesViewController.swift */,
 				0441E97E26CE8C520054A0CD /* LanguageViewController.swift */,
+				04DF1F5B26CF807200D7031E /* AboutUsViewController.swift */,
+				04DF1F6026CF81F000D7031E /* AppearenceViewController.swift */,
+				04DF1F6526CF933200D7031E /* EditProfileViewController.swift */,
+				040C214126DE178300A042C8 /* ChatUserProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -412,9 +424,12 @@
 				041C103626B2E69A00CAD568 /* AppConfig.swift in Sources */,
 				04395E0B26C68C62006EFA1C /* MessageLocationCell.swift in Sources */,
 				04081DB026B15494000E74D3 /* ChatViewController.swift in Sources */,
+				040C214226DE178300A042C8 /* ChatUserProfileViewController.swift in Sources */,
 				040B3D1B26C546C300EAB346 /* func.swift in Sources */,
 				0499E01A26B3C90800732ED4 /* DialServerIDViewController.swift in Sources */,
+				04DF1F6626CF933200D7031E /* EditProfileViewController.swift in Sources */,
 				0423C45926C2503B003495C5 /* MessageImageCell.swift in Sources */,
+				04DF1F6126CF81F000D7031E /* AppearenceViewController.swift in Sources */,
 				0464EA5226B9417F00F6C92C /* ChatUserTableViewController.swift in Sources */,
 				04081DAB26B15487000E74D3 /* DialViewController.swift in Sources */,
 				04081D5626B12791000E74D3 /* AppDelegate.swift in Sources */,
@@ -423,6 +438,7 @@
 				04480AAE26C3A4080059FA39 /* MessageLinkCell.swift in Sources */,
 				04081DBA26B154C5000E74D3 /* FriendsViewController.swift in Sources */,
 				04081D9B26B139D4000E74D3 /* TabBarViewController.swift in Sources */,
+				04DF1F5C26CF807200D7031E /* AboutUsViewController.swift in Sources */,
 				0441E97F26CE8C520054A0CD /* LanguageViewController.swift in Sources */,
 				0457057126CA3EE100CD863F /* MessageVideoCell.swift in Sources */,
 				04297F4726CB8A2600295510 /* MessageDocumentCell.swift in Sources */,

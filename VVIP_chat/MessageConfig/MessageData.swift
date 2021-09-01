@@ -13,13 +13,14 @@ struct MessageData {
     let text: String
     let isFirstUser: Bool
     let image: imageData?
-//    let contact: Array<String>?
+    //    let contact: Array<String>?
     let contact: ContactData?
     let location: CLLocation?
     let document: URL?
     let messageType: MessageType
+    let time: String
     
-    init(text: String, isFirstUser: Bool, image: imageData?,contact: ContactData?, location: CLLocation?,document:URL?, messageType: MessageType) {
+    init(text: String, isFirstUser: Bool, image: imageData?,contact: ContactData?, location: CLLocation?,document:URL?, messageType: MessageType, time: String) {
         self.text = text
         self.isFirstUser = isFirstUser
         self.image = image
@@ -27,7 +28,8 @@ struct MessageData {
         self.messageType = messageType
         self.location = location
         self.document = document
-        }
+        self.time = time
+    }
 }
 
 struct ContactData{

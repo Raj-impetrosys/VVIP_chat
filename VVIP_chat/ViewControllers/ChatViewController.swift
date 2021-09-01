@@ -6,8 +6,6 @@
 //
 
 import UIKit
-//import StreamChat
-//import StreamChatUI
 import SocketIO
 import Starscream
 import MobileCoreServices
@@ -41,10 +39,8 @@ extension ChatViewController: ChatViewControllerDelegate{
     }
     
     func cellTaped(image: UIImage) {
-        //        let vc = (self.storyboard?.instantiateViewController(identifier: "ImageViewController"))! as ImageViewController
         let vc = ImageViewController()
         vc.image = image
-        //        self.navigationController?.pushViewController(vc, animated: true)
         present(vc, animated: true, completion: nil)
     }
     
@@ -83,6 +79,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var attachment: UIImageView!
     @IBOutlet weak var mic: UIImageView!
     @IBOutlet weak var hstack: UIStackView!
+    @IBOutlet weak var menu: UIBarButtonItem!
     
     var socket: WebSocket!
     var isConnected = false
@@ -107,34 +104,32 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     var mysymmetricKey: SymmetricKey!
     var othersymmetricKey: SymmetricKey!
     
-    //    var completionHandler: ((UIImage) -> Void)?
-    
-    var messages: [MessageData] = [
-        MessageData(text: "Hey", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "Hello", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "I am Raj from India, working as a Flutter and IOS developer at Impetrosys, my location is:", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "Apollo premier", isFirstUser: true, image: nil, contact: nil, location: CLLocation(latitude: 22.749929207689632, longitude: 75.89680790621576), document: nil, messageType: .location),
-        MessageData(text: "okay, I am jack from US, this is my location", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "impetrosys location", isFirstUser: false, image: nil, contact: nil, location: CLLocation(latitude: 22.717652352004368, longitude: 75.87711553958752), document: nil, messageType: .location),
-        MessageData(text: "Okay", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "Raj can we meet somewhere to discuss about the project detail", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "Off-course jack we can meet at ICH so that we can discuss", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "Let me know the time, so that i will come at the destination", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "Monday 6:00 PM, is okay for that", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "yup i'll", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "Okay thanks", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text),
-        MessageData(text: "photo", isFirstUser: false, image: imageData(image: UIImage(named: "nature"), url: nil), contact: nil, location: nil, document: nil, messageType: .image),
-        MessageData(text: "https://www.google.com", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .link),
-        MessageData(text: "Raj", isFirstUser: true, image: nil, contact: ContactData(phones: ["9977783414", "8819896489"], image: UIImage(named:"person")), location: nil, document: nil, messageType: .contact),
-        MessageData(text: "Stark", isFirstUser: false, image: nil, contact: ContactData(phones: ["(997)7783414"], image: UIImage(named:"person")), location: nil, document: nil, messageType: .contact),
-        MessageData(text: "BigBuckBunny", isFirstUser: true, image: imageData(image: generateThumbnail1(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!), url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")), contact: nil, location: nil, document: nil, messageType: .video),
-        MessageData(text: "file-sample_100kB.doc", isFirstUser: false, image: nil, contact: nil, location: nil, document: URL(string: "file:///Users/mac/Library/Developer/CoreSimulator/Devices/2254DE57-ED46-408F-B200-8E6F31D288CD/data/Containers/Shared/AppGroup/513519F3-7C21-4C4F-918F-06920BA51E0E/File%20Provider%20Storage/Downloads/file-sample_100kB.doc"), messageType: .document),
-    ]
-    
     let firstAttribute : [NSAttributedString.Key : Any] = [.foregroundColor : UIColor.blue]
     let secondAttribute : [NSAttributedString.Key : Any] = [.foregroundColor : UIColor.blue]
-    
     var useFirstAttribute: Bool = true
+    
+    var messages: [MessageData] = [
+        MessageData(text: "Hey", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:00 AM"),
+        MessageData(text: "Hello", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:00 AM"),
+        MessageData(text: "I am Raj from India, working as a Flutter and IOS developer at Impetrosys, my location is:", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:00 AM"),
+        MessageData(text: "Apollo premier", isFirstUser: true, image: nil, contact: nil, location: CLLocation(latitude: 22.749929207689632, longitude: 75.89680790621576), document: nil, messageType: .location, time: "6:01 AM"),
+        MessageData(text: "okay, I am jack from US, this is my location", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:01 AM"),
+        MessageData(text: "impetrosys location", isFirstUser: false, image: nil, contact: nil, location: CLLocation(latitude: 22.717652352004368, longitude: 75.87711553958752), document: nil, messageType: .location, time: "6:02 AM"),
+        MessageData(text: "Okay", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:03 AM"),
+        MessageData(text: "Raj can we meet somewhere to discuss about the project detail", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:04 AM"),
+        MessageData(text: "Off-course jack we can meet at ICH so that we can discuss", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:05 AM"),
+        MessageData(text: "Let me know the time, so that i will come at the destination", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:06 AM"),
+        MessageData(text: "Monday 6:00 PM, is okay for that", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "8:00 AM"),
+        MessageData(text: "yup i'll", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "9:00 AM"),
+        MessageData(text: "Okay thanks", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "10:12 AM"),
+        MessageData(text: "photo", isFirstUser: false, image: imageData(image: UIImage(named: "nature"), url: nil), contact: nil, location: nil, document: nil, messageType: .image, time: "2:00 PM"),
+        MessageData(text: "https://www.google.com", isFirstUser: false, image: nil, contact: nil, location: nil, document: nil, messageType: .link, time: "3:00 PM"),
+        MessageData(text: "Raj", isFirstUser: true, image: nil, contact: ContactData(phones: ["9977783414", "8819896489"], image: UIImage(named:"person")), location: nil, document: nil, messageType: .contact, time: "3:12 PM"),
+        MessageData(text: "Stark", isFirstUser: false, image: nil, contact: ContactData(phones: ["(997)7783414"], image: UIImage(named:"person")), location: nil, document: nil, messageType: .contact, time: "3:14 PM"),
+        MessageData(text: "BigBuckBunny", isFirstUser: true, image: imageData(image: generateThumbnail1(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!), url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")), contact: nil, location: nil, document: nil, messageType: .video, time: "3:20 PM"),
+        MessageData(text: "file-sample_100kB.doc", isFirstUser: false, image: nil, contact: nil, location: nil, document: URL(string: "file:///Users/mac/Library/Developer/CoreSimulator/Devices/2254DE57-ED46-408F-B200-8E6F31D288CD/data/Containers/Shared/AppGroup/513519F3-7C21-4C4F-918F-06920BA51E0E/File%20Provider%20Storage/Downloads/file-sample_100kB.doc"), messageType: .document, time: "3:59 PM"),
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableviewConfig()
@@ -186,45 +181,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return UIMenu(title: "Action", children: [reply, copy, delete])
         }
     }
-    //
-    //    func contextMenuInteraction(_ interaction: UIContextMenuInteraction,
-    //                                configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
-    //        return UIContextMenuConfiguration(identifier: nil,
-    //                                          previewProvider: nil,
-    //                                          actionProvider: {
-    //                suggestedActions in
-    //            let inspectAction =
-    //                UIAction(title: NSLocalizedString("Reply", comment: ""),
-    //                         image: UIImage(systemName: "arrowshape.turn.up.left")) { action in
-    ////                        self.performInspect()
-    //                }
-    //
-    //            let duplicateAction =
-    //                UIAction(title: NSLocalizedString("Copy", comment: ""),
-    //                         image: UIImage(systemName: "doc.on.doc")) { action in
-    ////                        self.performDuplicate()
-    //                    print("Copy")
-    //                    UIPasteboard.general.string = self.messages[self.selectedMessage].text
-    //                }
-    //
-    //            let deleteAction =
-    //                UIAction(title: NSLocalizedString("Delete", comment: ""),
-    //                         image: UIImage(systemName: "trash"),
-    //                         attributes: .destructive) { action in
-    ////                        self.performDelete()
-    //                    if(self.selectedMessage != nil){
-    //                        print("delete")
-    //                        self.messages.remove(at: self.selectedMessage)
-    //                        self.messageTableView.reloadData()
-    //                        self.selectedMessage = nil
-    //                    } else {
-    //                        print("please select message")
-    //                    }
-    //                }
-    //
-    //            return UIMenu(title: "Context menu", children: [inspectAction, duplicateAction, deleteAction])
-    //        })
-    //    }
     
     private func generateSymmetricKey(){
         let myexportedPrivateKey = getData(key: "myprivateKey")
@@ -333,6 +289,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func tableviewConfig(){
         messageTableView.scrollToBottom()
+        //        messageTableView.contentOffset = CGPoint(x: 0, y: self.view.frame.maxY)
     }
     
     private func socketConfig(){
@@ -507,6 +464,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         )
         
+        alert.addAction(
+            .init(title: "Cancel", style: .cancel) { _ in
+                //                self.pickImage(source: .camera)
+            }
+        )
+        
         let popover = alert.popoverPresentationController
         popover?.sourceRect = CGRect(x: self.view.bounds.maxX, y: self.view.bounds.maxY, width: 0, height: 0)
         popover?.sourceView = self.view
@@ -533,17 +496,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             present(alert, animated: true, completion: nil)
         }
     }
-    
-    //    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
-    //         let selectedImage : UIImage = image
-    //        pickedImage = selectedImage
-    //        messageTableView.reloadData()
-    //        print(selectedImage.size)
-    //        self.textField.text = "\(image.size)"
-    //        self.send.isHidden = false
-    //        print("image picked")
-    //        self.dismiss(animated: true, completion: nil)
-    //    }
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print(picker.mediaTypes)
@@ -584,7 +536,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         print(info)
-        //        completionHandler?(image)
         
         self.textField.text = "\(String(describing: filename))"
         self.send.isHidden = false
@@ -642,9 +593,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         )
         
-                let popover = alert.popoverPresentationController
-                popover?.sourceRect = CGRect(x: self.view.bounds.maxX, y: self.view.bounds.maxY, width: 0, height: 0)
-                popover?.sourceView = self.view
+        alert.addAction(
+            .init(title: "Cancel", style: .cancel) { _ in
+                //                self.pickImage(source: .camera)
+            }
+        )
+        
+        let popover = alert.popoverPresentationController
+        popover?.sourceRect = CGRect(x: self.view.bounds.maxX, y: self.view.bounds.maxY, width: 0, height: 0)
+        popover?.sourceView = self.view
         present(alert.fixConstraints(), animated: true)
     }
     
@@ -707,7 +664,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 (contact, stop) in
                 // Array containing all unified contacts from everywhere
                 contacts.append(contact)
-//                print(contact.givenName)
+                //                print(contact.givenName)
             }
             self.showContactList(contacts: contacts)
         }
@@ -839,18 +796,39 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         dismiss(animated: true, completion: nil)
     }
     
-    let recordView = UIView(frame: CGRect(x: 50, y: 0, width: 300, height: 60))
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 60))
-
+    
+    private func hideBtns(hide:Bool, alpha: CGFloat){
+        self.textField.isHidden = hide
+        self.attachment.isHidden = hide
+        self.camera.isHidden = hide
+        self.send.isHidden = hide
+        self.textField.alpha = alpha
+        self.attachment.alpha = alpha
+        self.camera.alpha = alpha
+        self.send.alpha = alpha
+    }
+    
     private func recordViewConfig(){
-        label.textAlignment = .center
-        label.text = "Recording...: "+audioRecorder.currentTime.description
-        recordView.addSubview(label)
-        recordView.backgroundColor = .red
-        textField.isHidden = true
-        camera.isHidden = true
-        attachment.isHidden = true
-        hstack.addArrangedSubview(label)
+        label.textAlignment = .left
+//        label.text = "Recording: "+audioRecorder.currentTime.description
+        label.textColor = .red
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveLinear], animations: {
+            self.hideBtns(hide: true, alpha: 0.2)
+            self.hstack.addArrangedSubview(self.label)
+        }, completion: nil)
+        let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        print(timer.fireDate)
+        
+        label.alpha = 0.2
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveLinear, .repeat, .autoreverse], animations: {self.label.alpha = 1.0}, completion: nil)
+    }
+    
+    @objc func fireTimer() {
+        if(self.audioRecorder != nil)
+        {
+            self.label.text = "Recording: " + String(format: "%.01f", self.audioRecorder.currentTime)
+        }
     }
     
     var recordingSession: AVAudioSession!
@@ -861,7 +839,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         var obs: NSKeyValueObservation?
         recordingSession = AVAudioSession.sharedInstance()
         obs = recordingSession.observe(\.outputVolume) { (av, change) in
-                print("volume \(av.outputVolume)")
+            print("volume \(av.outputVolume)")
             print(av)
             print(change)
             self.label.text = "\(change)"
@@ -908,7 +886,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             audioRecorder.delegate = self
             audioRecorder.record()
             print(audioRecorder.currentTime)
-            mic.image = UIImage(systemName: "stop.fill")
+            //            mic.image = UIImage(systemName: "stop.fill")
+            UIView.transition(with: mic,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.mic.image = UIImage(systemName: "mic.slash") },
+                              completion: nil)
+            mic.tintColor = UIColor.red
         } catch {
             finishRecording(success: false)
             print("finish")
@@ -925,25 +909,32 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         audioRecorder = nil
         
         if success {
-            mic.image = UIImage(systemName: "mic.fill")
+            //            mic.image = UIImage(systemName: "mic.fill")
+            UIView.transition(with: mic,
+                              duration: 0.2,
+                              options: .transitionCrossDissolve,
+                              animations: { self.mic.image = UIImage(systemName: "mic.fill") },
+                              completion: nil)
+            mic.tintColor = UIColor.lightGray
             print("success")
-            label.removeFromSuperview()
-            textField.isHidden = false
-            camera.isHidden = false
-            attachment.isHidden = false
-            //                recordButton.setTitle("Tap to Re-record", for: .normal)
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveLinear], animations: {
+                self.label.removeFromSuperview()
+                self.hideBtns(hide: false, alpha: 1.0)
+            }, completion: nil)
         } else {
-            //                recordButton.setTitle("Tap to Record", for: .normal)
-            // recording failed :(
-            mic.image = UIImage(systemName: "mic.fill")
-
+            //            mic.image = UIImage(systemName: "mic.fill")
+            UIView.transition(with: mic,
+                              duration: 0.2,
+                              options: .transitionCrossDissolve,
+                              animations: { self.mic.image = UIImage(systemName: "mic.fill") },
+                              completion: nil)
+            
             print("recording failed")
         }
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag {
-            //            micTapped.finishRecording(success: false)
             print("finish")
             finishRecording(success: false)
         }
@@ -976,20 +967,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func sendBtnTapped(){
         let messageText:String = textField.text!.trimmingCharacters(in: .whitespaces)
+        let time = getTime()
         //        if(!messageText.isEmpty && isConnected){
         if(!messageText.isEmpty){
             //check if entered text is a link
-                        _ = getLink(text: messageText)
+            _ = getLink(text: messageText)
             
-            let msg = MessageData(text: messageText, isFirstUser: true, image: imageData(image: pickedImage, url: path), contact: pickedContact,location: pickedLocation, document: path, messageType: messageType)
+            let msg = MessageData(text: messageText, isFirstUser: true, image: imageData(image: pickedImage, url: path), contact: pickedContact,location: pickedLocation, document: path, messageType: messageType, time: time)
             
             messages.append(msg)
             sendBySocket(messageText: messageText)
-            print(messages)
+            //            print(messages)
             messageTableView.reloadData()
             //            textField.text = ""
             prepareForReuse()
-            send.isHidden = true
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveLinear], animations: {
+                self.send.isHidden = true
+            }, completion: nil)
             messageTableView.scrollToBottom()
         }
         else{
@@ -1062,6 +1056,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         //            let ellipsis = UIBarButtonItem(image: UIImage(systemName: "ellipsis")?.rotate(1.5708), style: .plain, target: self, action: #selector(self.ellipsisTapped))
         //            self.navigationItem.rightBarButtonItems = [ellipsis,person]
         titleConfig()
+        rightMenuConfig()
     }
     
     private func titleConfig(){
@@ -1093,42 +1088,66 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.navigationItem.titleView = titleView
         self.navigationController?.navigationBar.prefersLargeTitles = false
+        
+        titleView.isUserInteractionEnabled = true
+        titleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(profileTapped)))
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    private func rightMenuConfig(){
+        var menuItems: [UIAction] {
+            return [
+                UIAction(title: "View Contact", image: UIImage(systemName: "person.text.rectangle"), handler: { (_) in
+                    let vc = (self.storyboard?.instantiateViewController(identifier: "ChatUserProfileViewController"))! as ChatUserProfileViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }),
+                UIAction(title: "Search", image: UIImage(systemName: "magnifyingglass"), handler: { (_) in
+                }),
+                UIAction(title: "Mute Notifications", image: UIImage(systemName: "bell.slash"), attributes: .destructive, handler: { (_) in
+                }),
+                UIAction(title: "Clear Chat", image: UIImage(systemName: "trash"), attributes: .destructive, handler: { (_) in
+                    self.messages = []
+                    self.messageTableView.reloadData()
+                }),
+                UIAction(title: "Block", image: UIImage(systemName: "lock"), attributes: .destructive, handler: { (_) in
+                }),
+            ]
+        }
+        
+        var demoMenu: UIMenu {
+            return UIMenu(title: "My menu", image: nil, identifier: nil, options: [], children: menuItems)
+        }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Menu", image: UIImage(named:"more-20"), primaryAction: nil, menu: demoMenu)
+    }
     
-    //MARK: TableViewDelegates
+    @IBAction func menuTapped(_ sender: Any) {
+        print("menu tapped")
+        //        let interaction = UIContextMenuInteraction(delegate: self)
+        //        menu.menu = UIMenu(title: "Edit",
+        //                           image: UIImage(systemName: "photo"),
+        //                           options: [.displayInline], // [], .displayInline, .destructive
+        //                 children: [])
+        //        menu.addInteraction(interaction)
+    }
+    
+    @IBAction func callTapped(_ sender: Any) {
+        print("call tapped")
+    }
+    
+    @IBAction func videoTapped(_ sender: Any) {
+        print("video tapped")
+    }
+    
+    @objc func profileTapped(){
+        print("profile Tapped")
+        let vc = (self.storyboard?.instantiateViewController(identifier: "ChatUserProfileViewController"))! as ChatUserProfileViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageTableViewCell
-        //        let imageCell = tableView.dequeueReusableCell(withIdentifier: "MessageImageCell", for: indexPath) as! MessageImageCell
-        //        cell.updateMessageCell(by: messages[indexPath.row])
-        //        imageCell.updateMessageCell(by: messages[indexPath.row])
-        //        cell.imageView = UIImageView(image: UIImage(systemName: "person.fill"))
-        //        if(pickedImage != nil){
-        //            cell.imageView?.image = pickedImage
-        //        }
-        //        image?.size.height = 100
-        //        cell.largeContentImage = image
-        //        if(cell.isSelected){
-        //            cell.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-        //        }
-        //        cell.selectedBackgroundView?.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        //        print(indexPath.row)
-        //        return cell
-        
         switch messages[indexPath.row].messageType{
         case .text:
             let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageTableViewCell
@@ -1177,4 +1196,39 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         //                print("selected item \(indexPath.row)")
     }
     
+}
+
+extension ChatViewController: UIContextMenuInteractionDelegate {
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        let identifier = "\(String(describing: index))" as NSString
+        return UIContextMenuConfiguration(
+            identifier: identifier,
+            previewProvider: nil) { _ in
+            // 3
+            let reply =
+                UIAction(title: NSLocalizedString("Reply", comment: ""),
+                         image: UIImage(systemName: "arrowshape.turn.up.left")) { action in
+                    //                        self.performInspect()
+                }
+                
+                let copy =
+                    UIAction(title: NSLocalizedString("Copy", comment: ""),
+                             image: UIImage(systemName: "doc.on.doc")) { action in
+                        print("Copy")
+                        //                        UIPasteboard.general.string = self.messages[index].text
+                    }
+                
+                let delete =
+                    UIAction(title: NSLocalizedString("Delete", comment: ""),
+                             image: UIImage(systemName: "trash"),
+                             attributes: .destructive) { action in
+                        print("delete")
+                        //                        self.messages.remove(at: index)
+                        self.messageTableView.reloadData()
+                        self.selectedMessage = nil
+                    }
+                
+                return UIMenu(title: "Action", children: [reply, copy, delete])
+        }
+    }
 }

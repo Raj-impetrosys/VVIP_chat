@@ -8,7 +8,7 @@
 import UIKit
 
 class FriendsViewController: UIViewController {
-
+    
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var personBtn: UIBarButtonItem!
     @IBOutlet weak var ellipsisBtn: UIBarButtonItem!
@@ -16,11 +16,21 @@ class FriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navConfig()
-        // Do any additional setup after loading the view.
     }
     
     private func navConfig(){
+        rightMenuConfig()
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+    }
+    
+    private func rightMenuConfig(){
+        let barButtonMenu = UIMenu(title: "", children: [
+            UIAction(title: NSLocalizedString("Invite a friend", comment: ""), image: UIImage(systemName: "person.crop.circle.badge.plus"), handler: {_ in}),
+            UIAction(title: NSLocalizedString("Add Contact", comment: ""), image: UIImage(systemName: "person.badge.plus"), handler: {_ in}),
+            UIAction(title: NSLocalizedString("Referesh", comment: ""), image: UIImage(systemName: "arrow.clockwise"), handler: {_ in}),
+            UIAction(title: NSLocalizedString("search", comment: ""), image: UIImage(systemName: "magnifyingglass"), handler: {_ in})
+        ])
+        ellipsisBtn.menu = barButtonMenu
     }
     
     @IBAction func personBtnTapped(_ sender: Any) {
@@ -30,15 +40,4 @@ class FriendsViewController: UIViewController {
     @IBAction func ellipsisBtnTapped(_ sender: Any) {
         print("ellipsis Btn Tapped")
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

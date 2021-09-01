@@ -53,8 +53,6 @@ class MessageDocumentCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        //        print("selected: \(selected)")
-        // Configure the view for the selected state
         if(selected){
             contentView.backgroundColor = #colorLiteral(red: 0.1072840765, green: 0.1896482706, blue: 0.3115866184, alpha: 1).withAlphaComponent(0.8)
         } else {
@@ -72,19 +70,17 @@ class MessageDocumentCell: UITableViewCell {
         self.url = message.document
         self.docSize.text = String(fileSize(fromPath: message.document!.path)!)
         self.docType.text = message.document?.pathExtension
-        self.time.text = getTime()
+        self.time.text = message.time
         if(message.isFirstUser){
             messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1)
             trailingConstraint.isActive = true
             fileBackgroundView.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.5464898768, blue: 0.7568627596, alpha: 1)
             checkMark.isHidden = false
-            //            messageLabel.textAlignment = .left
         } else {
             messageBackgroundView.backgroundColor = chatGray
             leadingConstrint.isActive = true
-            fileBackgroundView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            fileBackgroundView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).withAlphaComponent(0.2)
             checkMark.isHidden = true
-            //            messageLabel.textAlignment = .left
         }
     }
 }

@@ -31,7 +31,7 @@ class DialPlayerCodeViewController: UIViewController {
     
     private func dialConfig(){
         dialScreenLbl.text = ""
-
+        
         let key1Gstr = UITapGestureRecognizer(target: self, action:  #selector(self.key1Pressed))
         let key2Gstr = UITapGestureRecognizer(target: self, action:  #selector(self.key2Pressed))
         let key3Gstr = UITapGestureRecognizer(target: self, action:  #selector(self.key3Pressed))
@@ -104,7 +104,7 @@ class DialPlayerCodeViewController: UIViewController {
         print("9 tapped")
         dialScreenLbl.text = dialScreenLbl.text!+"9"
     }
-
+    
     @objc func key0Pressed(sender : UITapGestureRecognizer) {
         print("0 tapped")
         dialScreenLbl.text = dialScreenLbl.text!+"0"
@@ -120,9 +120,9 @@ class DialPlayerCodeViewController: UIViewController {
     @objc func longPressed(sender: UILongPressGestureRecognizer)
     {
         print("longpressed")
-//        if(dialScreenLbl.text != ""){
-//            dialScreenLbl.text?.remove(at: (dialScreenLbl.text?.index(before: dialScreenLbl.text!.endIndex))!)
-//        }
+        //        if(dialScreenLbl.text != ""){
+        //            dialScreenLbl.text?.remove(at: (dialScreenLbl.text?.index(before: dialScreenLbl.text!.endIndex))!)
+        //        }
         dialScreenLbl.text = ""
     }
     
@@ -139,15 +139,15 @@ class DialPlayerCodeViewController: UIViewController {
             present(alert, animated: true)
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

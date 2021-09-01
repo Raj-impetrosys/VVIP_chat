@@ -15,13 +15,53 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var appearance: UIStackView!
     @IBOutlet weak var languge: UIStackView!
     @IBOutlet weak var aboutUs: UIStackView!
+    @IBOutlet weak var logout: UIStackView!
     @IBOutlet weak var edit: UIBarButtonItem!
+    @IBOutlet weak var more: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rightMenuConfig()
         manageAccount.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(manageAccountTapped)))
         privacyAndSecurity.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(privacyAndSecurityTapped)))
+        appearance.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(appearanceTapped)))
         languge.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(languageTapped)))
+        aboutUs.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(aboutUsTapped)))
+        logout.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(logoutTapped)))
+    }
+    
+    private func rightMenuConfig(){
+        let barButtonMenu = UIMenu(title: "", children: [
+            UIAction(title: NSLocalizedString("Notification", comment: ""), image: UIImage(systemName: "bell"), handler: {_ in}),
+            UIAction(title: NSLocalizedString("Logout", comment: ""), image: UIImage(systemName: "arrow.right.doc.on.clipboard"), handler: {_ in})
+        ])
+        more.menu = barButtonMenu
+    }
+    
+    @objc func appearanceTapped(){
+        print("Appearence tapped")
+        let vc = (self.storyboard?.instantiateViewController(withIdentifier: "AppearenceViewController")) as! AppearenceViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func aboutUsTapped(){
+        print("about us tapped")
+        let vc = (self.storyboard?.instantiateViewController(withIdentifier: "AboutUsViewController")) as! AboutUsViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func logoutTapped(){
+        let alert = UIAlertController(title: "Alert", message: "Do you want to logout?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: {_ in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {_ in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        present(alert, animated: true, completion: nil)
     }
     
     @objc func manageAccountTapped(){
@@ -41,44 +81,4 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         let vc = (self.storyboard?.instantiateViewController(withIdentifier: "LanguageViewController")) as! LanguageViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-//    @IBOutlet weak var usernameField: UITextField!
-//    @IBOutlet weak var hstackView: UIStackView!
-//    @IBOutlet var image: UIImageView!
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        usernameField.delegate = self
-//        textFieldConfig()
-////        image.image = UIImage(systemName: "person.fill")
-//    }
-//
-//    private func textFieldConfig(){
-//        usernameField.attributedPlaceholder = NSAttributedString(string: "User Name",
-//                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemTeal.withAlphaComponent(0.5)])
-//        hstackView.layer.borderWidth = 1
-//        hstackView.layer.borderColor = UIColor.white.cgColor
-//        hstackView.layer.cornerRadius = 10
-//    }
-//
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-//     {
-//     textField.resignFirstResponder()
-//            return true;
-//        }
-//
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        usernameField.resignFirstResponder()
-//    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -11,8 +11,8 @@ import AVFoundation
 
 public func saveData(key: String, data: Any){
     let userDefaults = UserDefaults.standard
-       userDefaults.set(data, forKey: key)
-       userDefaults.synchronize()
+    userDefaults.set(data, forKey: key)
+    userDefaults.synchronize()
 }
 
 public func getData(key: String) -> Any{
@@ -41,33 +41,33 @@ public func generateThumbnail1(url: URL) -> UIImage? {
         imageGenerator.appliesPreferredTrackTransform = true
         // Select the right one based on which version you are using
         // Swift 4.2
-//        let cgImage = try imageGenerator.copyCGImage(at: .zero,
-//                                                     actualTime: nil)
+        //        let cgImage = try imageGenerator.copyCGImage(at: .zero,
+        //                                                     actualTime: nil)
         let cgImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 20, timescale: 5) , actualTime: nil)
         // Swift 4.0
-//        let cgImage = try imageGenerator.copyCGImage(at: kCMTimeZero,
-//                                                     actualTime: nil)
-
-
+        //        let cgImage = try imageGenerator.copyCGImage(at: kCMTimeZero,
+        //                                                     actualTime: nil)
+        
+        
         return UIImage(cgImage: cgImage)
     } catch {
         print(error.localizedDescription)
-
+        
         return nil
     }
-//    DispatchQueue.global().async {
-//        let asset = AVAsset(url: url)
-//        let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
-//         assetImgGenerate.appliesPreferredTrackTransform = true
-//        let time = CMTimeMake(value: 1, timescale: 2)
-//        let img = try? assetImgGenerate.copyCGImage(at: time, actualTime: nil)
-//        if img != nil {
-//        let frameImg  = UIImage(cgImage: img!)
-//                        DispatchQueue.main.async(execute: {
-//        // assign your image to UIImageView
-//                        })
-//                }
-//        }
+    //    DispatchQueue.global().async {
+    //        let asset = AVAsset(url: url)
+    //        let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
+    //         assetImgGenerate.appliesPreferredTrackTransform = true
+    //        let time = CMTimeMake(value: 1, timescale: 2)
+    //        let img = try? assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+    //        if img != nil {
+    //        let frameImg  = UIImage(cgImage: img!)
+    //                        DispatchQueue.main.async(execute: {
+    //        // assign your image to UIImageView
+    //                        })
+    //                }
+    //        }
 }
 
 func imagePreview(from moviePath: URL, in seconds: Double) -> UIImage? {
@@ -75,7 +75,7 @@ func imagePreview(from moviePath: URL, in seconds: Double) -> UIImage? {
     let asset = AVURLAsset(url: moviePath)
     let generator = AVAssetImageGenerator(asset: asset)
     generator.appliesPreferredTrackTransform = true
-
+    
     guard let imageRef = try? generator.copyCGImage(at: timestamp, actualTime: nil) else {
         return nil
     }
@@ -119,10 +119,10 @@ func sizeForLocalFilePath(filePath:String) -> UInt64 {
 
 func fileSize(fromPath path: String) -> String? {
     guard let size = try? FileManager.default.attributesOfItem(atPath: path)[FileAttributeKey.size],
-        let fileSize = size as? UInt64 else {
+          let fileSize = size as? UInt64 else {
         return nil
     }
-
+    
     // bytes
     if fileSize < 1023 {
         return String(format: "%lu bytes", CUnsignedLong(fileSize))
@@ -143,18 +143,42 @@ func fileSize(fromPath path: String) -> String? {
 }
 
 func getTime() -> String {
-//    let date = Date()
-//    let time:DateComponents! = Calendar.current.dateComponents([.hour, .minute, .calendar, .day, .month, .year], from: date)
+    //    let date = Date()
+    //    let time:DateComponents! = Calendar.current.dateComponents([.hour, .minute, .calendar, .day, .month, .year], from: date)
     
     let formatter = DateFormatter()
     formatter.locale = Locale(identifier: "en_US_POSIX")
     formatter.dateFormat = "h:mm a"
     formatter.amSymbol = "AM"
     formatter.pmSymbol = "PM"
-
+    
     let dateString = formatter.string(from: Date())
-//    let sendTime = String(describing: "\(String(describing: time.hour)):\(String(describing: time.minute))")
-//    let sendTime = "\(time.hour!):\(time.minute!) AM"
-//    print(sendTime) // may print: Optional(13)
+    //    let sendTime = String(describing: "\(String(describing: time.hour)):\(String(describing: time.minute))")
+    //    let sendTime = "\(time.hour!):\(time.minute!) AM"
+    //    print(sendTime) // may print: Optional(13)
     return dateString
+}
+
+public func placeholderText(field: UITextField,text: String){
+    field.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
+}
+
+extension UIColor {
+    convenience init(hexString: String) {
+        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt64()
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (255, 0, 0, 0)
+        }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
 }
