@@ -8,6 +8,10 @@
 import UIKit
 
 class AppearenceViewController: UIViewController {
+    @IBOutlet var changeTheme: UIButton!
+    @IBOutlet weak var navItem: UINavigationBar!
+    @IBOutlet weak var ellipsis: UIBarButtonItem!
+    
     var box = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
     var box1 = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 400))
     var box2 = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
@@ -24,6 +28,54 @@ class AppearenceViewController: UIViewController {
         //        box.draw(CGRect())
         //        box.addBottomRoundedEdge(desiredCurve: 5)
         //        box1 = backView()
+        rightMenuConfig()
+    }
+    
+    @IBAction func changeThemeTapped(_ sender: Any) {
+        self.view.backgroundColor = Constants.themeColor
+    }
+    
+    @IBAction func changeTap(_ sender: Any) {
+        self.view.backgroundColor = Constants.themeColor
+        self.navigationController?.navigationBar.backgroundColor = .red
+//        self.navItem.backgroundColor = .red
+//        navItem.backgroundColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
+//        navItem.tintColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
+//        navItem.barTintColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+        box.backgroundColor = .red
+    }
+    
+    private func selectBoxConfig(){
+        let barButtonMenu = UIMenu(title: "", children: [
+            UIAction(title: NSLocalizedString("box1", comment: ""), image: UIImage(systemName: "bell"), handler: {_ in
+                self.box.backgroundColor = .red
+            }),
+            UIAction(title: NSLocalizedString("box2", comment: ""), image: UIImage(systemName: "bell"), handler: {_ in
+                self.box.backgroundColor = .green
+            }),
+            UIAction(title: NSLocalizedString("box3", comment: ""), image: UIImage(systemName: "bell"), handler: {_ in
+                self.box.backgroundColor = .blue
+            }),
+        ])
+        ellipsis.menu = barButtonMenu
+    }
+    
+    private func rightMenuConfig(){
+        let barButtonMenu = UIMenu(title: "", children: [
+//            UIAction(title: NSLocalizedString("Red", comment: ""), handler: {_ in
+//                self.box.backgroundColor = .red
+//            }),
+            UIAction(title: NSLocalizedString("Light", comment: ""), handler: {_ in
+//                self.box.backgroundColor = .green
+                self.view.window?.overrideUserInterfaceStyle = .light
+
+            }),
+            UIAction(title: NSLocalizedString("Dark", comment: ""), handler: {_ in
+//                self.box.backgroundColor = .blue
+                self.view.window?.overrideUserInterfaceStyle = .dark
+            }),
+        ])
+        ellipsis.menu = barButtonMenu
     }
     
     func boxConfig(box:UIView){
@@ -51,23 +103,23 @@ class AppearenceViewController: UIViewController {
         self.view.addSubview(box1)
         self.view.addSubview(box2)
         
-        //        let option: UIView.AnimationOptions = [.transitionCurlUp, .repeat, .autoreverse]
-        
-        //        UIView.animate(withDuration: 5, delay: 0, options: option) { [self] in
-        ////            box.frame.origin.y += box.frame.size.height
-        //            self.box.frame.size = CGSize(width: 300, height: 50)
-        //            text.frame.size = box.frame.size
-        //            text.transform = text.transform.scaledBy(x: 0.1, y: 0.1)
-        //            box.backgroundColor = .cyan
-        ////            box.layer.shadowColor = UIColor.blue.cgColor
-        //            box.layer.shadowOpacity = 0.1
-        //            box.layer.opacity = 0.1
-        ////            box.layer.transform.m11 = 5
-        ////            box.layer.transform.m12 = 0
-        ////            box.layer.transform.m21 = 0.5
-        ////            box.layer.transform = CATransform3D(m11: 1, m12: 0, m13: 0, m14: 0, m21: 0, m22: 1, m23: 0, m24: 0, m31: 0, m32: 0, m33: 0, m34: 0, m41: 0, m42: 0, m43: 0, m44: 0)
-        //            box.transform = box.transform.rotated(by: .pi)
-        //        }
+//                let option: UIView.AnimationOptions = [.transitionCurlUp, .repeat, .autoreverse]
+//
+//                UIView.animate(withDuration: 5, delay: 0, options: option) { [self] in
+//        //            box.frame.origin.y += box.frame.size.height
+//                    self.box.frame.size = CGSize(width: 300, height: 50)
+//                    text.frame.size = box.frame.size
+//                    text.transform = text.transform.scaledBy(x: 0.1, y: 0.1)
+//                    box.backgroundColor = .cyan
+//        //            box.layer.shadowColor = UIColor.blue.cgColor
+//                    box.layer.shadowOpacity = 0.1
+//                    box.layer.opacity = 0.1
+//        //            box.layer.transform.m11 = 5
+//        //            box.layer.transform.m12 = 0
+//        //            box.layer.transform.m21 = 0.5
+//        //            box.layer.transform = CATransform3D(m11: 1, m12: 0, m13: 0, m14: 0, m21: 0, m22: 1, m23: 0, m24: 0, m31: 0, m32: 0, m33: 0, m34: 0, m41: 0, m42: 0, m43: 0, m44: 0)
+//                    box.transform = box.transform.rotated(by: .pi)
+//                }
         
         box.isUserInteractionEnabled = true
         box.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(draggedView)))

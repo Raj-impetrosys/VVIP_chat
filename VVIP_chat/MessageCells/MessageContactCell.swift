@@ -14,7 +14,7 @@ class MessageContactCell: UITableViewCell {
     @IBOutlet weak var contactImageView: UIImageView!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var checkMark: UIImageView!
-
+    
     var trailingConstraint : NSLayoutConstraint!
     var leadingConstrint : NSLayoutConstraint!
     var chatGray = UIColor(red: 69/255.0, green: 90/255.0, blue: 100/255.0, alpha: 1)
@@ -24,6 +24,9 @@ class MessageContactCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         messageContact.text = nil
+        contactImageView.image = nil
+        time.text = nil
+//        checkMark.image = nil
         leadingConstrint.isActive = false
         trailingConstraint.isActive = false
     }
@@ -88,10 +91,14 @@ class MessageContactCell: UITableViewCell {
             messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1)
             trailingConstraint.isActive = true
             checkMark.isHidden = false
+            messageContact.textColor = .black
+            time.textColor = .black
         } else {
             messageBackgroundView.backgroundColor = chatGray
             leadingConstrint.isActive = true
             checkMark.isHidden = true
+            messageContact.textColor = .white
+            time.textColor = .white
         }
     }
     

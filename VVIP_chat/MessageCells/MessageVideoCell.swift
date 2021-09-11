@@ -16,7 +16,7 @@ class MessageVideoCell: UITableViewCell {
     @IBOutlet weak var messageImage: UIImageView!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var checkMark: UIImageView!
-
+    
     var trailingConstraint : NSLayoutConstraint!
     var leadingConstrint : NSLayoutConstraint!
     var chatGray = UIColor(red: 69/255.0, green: 90/255.0, blue: 100/255.0, alpha: 1)
@@ -25,6 +25,8 @@ class MessageVideoCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         messageImage.image = nil
+        time.text = nil
+//        checkMark.image = nil
         leadingConstrint.isActive = false
         trailingConstraint.isActive = false
     }
@@ -67,15 +69,17 @@ class MessageVideoCell: UITableViewCell {
         messageImage.image = message.image?.image
         self.url = message.image?.url
         self.time.text = message.time
-
+        
         if(message.isFirstUser){
             messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1)
             trailingConstraint.isActive = true
             checkMark.isHidden = false
+            time.textColor = .black
         } else {
             messageBackgroundView.backgroundColor = chatGray
             leadingConstrint.isActive = true
             checkMark.isHidden = true
+            time.textColor = .white
         }
     }
     

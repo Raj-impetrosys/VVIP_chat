@@ -28,6 +28,10 @@ class MessageDocumentCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         messageLabel.text = nil
+        time.text = nil
+//        checkMark.image = nil
+        docSize.text = nil
+        docType.text = nil
         leadingConstrint.isActive = false
         trailingConstraint.isActive = false
     }
@@ -62,7 +66,6 @@ class MessageDocumentCell: UITableViewCell {
     
     func updateMessageCell(by message: MessageData){
         messageBackgroundView.layer.cornerRadius = 10
-        
         messageBackgroundView.clipsToBounds = true
         trailingConstraint = messageBackgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         leadingConstrint = messageBackgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
@@ -76,11 +79,19 @@ class MessageDocumentCell: UITableViewCell {
             trailingConstraint.isActive = true
             fileBackgroundView.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.5464898768, blue: 0.7568627596, alpha: 1)
             checkMark.isHidden = false
+            messageLabel.textColor = .black
+            time.textColor = .black
+            docSize.textColor = .black
+            docType.textColor = .black
         } else {
             messageBackgroundView.backgroundColor = chatGray
             leadingConstrint.isActive = true
             fileBackgroundView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).withAlphaComponent(0.2)
             checkMark.isHidden = true
+            messageLabel.textColor = .white
+            time.textColor = .white
+            docType.textColor = .white
+            docSize.textColor = .white
         }
     }
 }

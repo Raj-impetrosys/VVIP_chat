@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406250B26E77D4A00028DBB /* TimeSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406250A26E77D4A00028DBB /* TimeSpan.swift */; };
 		04081D5626B12791000E74D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081D5526B12791000E74D3 /* AppDelegate.swift */; };
 		04081D5826B12791000E74D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081D5726B12791000E74D3 /* SceneDelegate.swift */; };
 		04081D5A26B12791000E74D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081D5926B12791000E74D3 /* ViewController.swift */; };
@@ -24,19 +25,22 @@
 		04081DBA26B154C5000E74D3 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04081DB926B154C5000E74D3 /* FriendsViewController.swift */; };
 		040B3D1B26C546C300EAB346 /* func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3D1A26C546C300EAB346 /* func.swift */; };
 		040C214226DE178300A042C8 /* ChatUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C214126DE178300A042C8 /* ChatUserProfileViewController.swift */; };
+		04188FBB26EC8AED00AE5943 /* SetPhotoVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04188FBA26EC8AED00AE5943 /* SetPhotoVideoViewController.swift */; };
+		041B358F26E0E351008975EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041B358E26E0E351008975EE /* MapKit.framework */; };
 		041C103626B2E69A00CAD568 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C103526B2E69A00CAD568 /* AppConfig.swift */; };
 		0423C45926C2503B003495C5 /* MessageImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423C45826C2503B003495C5 /* MessageImageCell.swift */; };
 		0423C45E26C262A6003495C5 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423C45D26C262A6003495C5 /* MessageType.swift */; };
 		04297F4726CB8A2600295510 /* MessageDocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04297F4626CB8A2600295510 /* MessageDocumentCell.swift */; };
 		04395E0626C636B6006EFA1C /* MessageContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04395E0526C636B6006EFA1C /* MessageContactCell.swift */; };
 		04395E0B26C68C62006EFA1C /* MessageLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04395E0A26C68C62006EFA1C /* MessageLocationCell.swift */; };
+		043A2F1926EB862200FC7EE1 /* DemoSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A2F1826EB862200FC7EE1 /* DemoSocket.swift */; };
 		0441E97526CE52CD0054A0CD /* ManageAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441E97426CE52CD0054A0CD /* ManageAccountViewController.swift */; };
 		0441E97A26CE72E60054A0CD /* PrivacyAndSecuritiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441E97926CE72E60054A0CD /* PrivacyAndSecuritiesViewController.swift */; };
 		0441E97F26CE8C520054A0CD /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441E97E26CE8C520054A0CD /* LanguageViewController.swift */; };
 		04480AAE26C3A4080059FA39 /* MessageLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480AAD26C3A4080059FA39 /* MessageLinkCell.swift */; };
 		04480AB426C3FF4A0059FA39 /* Encrypt_Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480AB326C3FF4A0059FA39 /* Encrypt_Decrypt.swift */; };
+		044ABA7D26E1E80300A6889E /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0457057926CA954D00CD863F /* Photos.framework */; };
 		0457057126CA3EE100CD863F /* MessageVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457057026CA3EE100CD863F /* MessageVideoCell.swift */; };
-		0457057A26CA954D00CD863F /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0457057926CA954D00CD863F /* Photos.framework */; };
 		0464EA1426B91F1B00F6C92C /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 0464EA1326B91F1B00F6C92C /* SocketIO */; };
 		0464EA1E26B9206200F6C92C /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464EA1D26B9206200F6C92C /* MessageData.swift */; };
 		0464EA2E26B9219C00F6C92C /* MessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464EA2D26B9219C00F6C92C /* MessageViewCell.swift */; };
@@ -46,6 +50,7 @@
 		0499E02226B3DA2E00732ED4 /* DialPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E02126B3DA2E00732ED4 /* DialPinViewController.swift */; };
 		0499E02A26B3DF8C00732ED4 /* DialPlayerCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E02926B3DF8C00732ED4 /* DialPlayerCodeViewController.swift */; };
 		0499E02F26B3E20700732ED4 /* DialPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499E02E26B3E20700732ED4 /* DialPasswordViewController.swift */; };
+		04B48F1A26E20693007FEC11 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B48F1926E20693007FEC11 /* Theme.swift */; };
 		04DF1F5C26CF807200D7031E /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1F5B26CF807200D7031E /* AboutUsViewController.swift */; };
 		04DF1F6126CF81F000D7031E /* AppearenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1F6026CF81F000D7031E /* AppearenceViewController.swift */; };
 		04DF1F6626CF933200D7031E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1F6526CF933200D7031E /* EditProfileViewController.swift */; };
@@ -69,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0406250A26E77D4A00028DBB /* TimeSpan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpan.swift; sourceTree = "<group>"; };
 		04081D5226B12791000E74D3 /* VVIP_chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VVIP_chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04081D5526B12791000E74D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04081D5726B12791000E74D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,12 +98,15 @@
 		04081DB926B154C5000E74D3 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		040B3D1A26C546C300EAB346 /* func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func.swift; sourceTree = "<group>"; };
 		040C214126DE178300A042C8 /* ChatUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUserProfileViewController.swift; sourceTree = "<group>"; };
+		04188FBA26EC8AED00AE5943 /* SetPhotoVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPhotoVideoViewController.swift; sourceTree = "<group>"; };
+		041B358E26E0E351008975EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		041C103526B2E69A00CAD568 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		0423C45826C2503B003495C5 /* MessageImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageImageCell.swift; sourceTree = "<group>"; };
 		0423C45D26C262A6003495C5 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
 		04297F4626CB8A2600295510 /* MessageDocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDocumentCell.swift; sourceTree = "<group>"; };
 		04395E0526C636B6006EFA1C /* MessageContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContactCell.swift; sourceTree = "<group>"; };
 		04395E0A26C68C62006EFA1C /* MessageLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLocationCell.swift; sourceTree = "<group>"; };
+		043A2F1826EB862200FC7EE1 /* DemoSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSocket.swift; sourceTree = "<group>"; };
 		0441E97426CE52CD0054A0CD /* ManageAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountViewController.swift; sourceTree = "<group>"; };
 		0441E97926CE72E60054A0CD /* PrivacyAndSecuritiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndSecuritiesViewController.swift; sourceTree = "<group>"; };
 		0441E97E26CE8C520054A0CD /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +121,7 @@
 		0499E02126B3DA2E00732ED4 /* DialPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialPinViewController.swift; sourceTree = "<group>"; };
 		0499E02926B3DF8C00732ED4 /* DialPlayerCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialPlayerCodeViewController.swift; sourceTree = "<group>"; };
 		0499E02E26B3E20700732ED4 /* DialPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialPasswordViewController.swift; sourceTree = "<group>"; };
+		04B48F1926E20693007FEC11 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		04DF1F5B26CF807200D7031E /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		04DF1F6026CF81F000D7031E /* AppearenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceViewController.swift; sourceTree = "<group>"; };
 		04DF1F6526CF933200D7031E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -122,8 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0457057A26CA954D00CD863F /* Photos.framework in Frameworks */,
 				0464EA1426B91F1B00F6C92C /* SocketIO in Frameworks */,
+				044ABA7D26E1E80300A6889E /* Photos.framework in Frameworks */,
+				041B358F26E0E351008975EE /* MapKit.framework in Frameworks */,
 				0464EA4226B9272F00F6C92C /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +243,9 @@
 				04DF1F6026CF81F000D7031E /* AppearenceViewController.swift */,
 				04DF1F6526CF933200D7031E /* EditProfileViewController.swift */,
 				040C214126DE178300A042C8 /* ChatUserProfileViewController.swift */,
+				0406250A26E77D4A00028DBB /* TimeSpan.swift */,
+				043A2F1826EB862200FC7EE1 /* DemoSocket.swift */,
+				04188FBA26EC8AED00AE5943 /* SetPhotoVideoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -265,6 +279,7 @@
 				0464EA1D26B9206200F6C92C /* MessageData.swift */,
 				0423C45D26C262A6003495C5 /* MessageType.swift */,
 				04480AB326C3FF4A0059FA39 /* Encrypt_Decrypt.swift */,
+				04B48F1926E20693007FEC11 /* Theme.swift */,
 			);
 			path = MessageConfig;
 			sourceTree = "<group>";
@@ -272,6 +287,7 @@
 		0457057826CA954D00CD863F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				041B358E26E0E351008975EE /* MapKit.framework */,
 				0457057926CA954D00CD863F /* Photos.framework */,
 			);
 			name = Frameworks;
@@ -420,6 +436,7 @@
 				04081DA626B15478000E74D3 /* CallViewController.swift in Sources */,
 				0441E97526CE52CD0054A0CD /* ManageAccountViewController.swift in Sources */,
 				0423C45E26C262A6003495C5 /* MessageType.swift in Sources */,
+				043A2F1926EB862200FC7EE1 /* DemoSocket.swift in Sources */,
 				04081D5A26B12791000E74D3 /* ViewController.swift in Sources */,
 				041C103626B2E69A00CAD568 /* AppConfig.swift in Sources */,
 				04395E0B26C68C62006EFA1C /* MessageLocationCell.swift in Sources */,
@@ -430,6 +447,7 @@
 				04DF1F6626CF933200D7031E /* EditProfileViewController.swift in Sources */,
 				0423C45926C2503B003495C5 /* MessageImageCell.swift in Sources */,
 				04DF1F6126CF81F000D7031E /* AppearenceViewController.swift in Sources */,
+				04188FBB26EC8AED00AE5943 /* SetPhotoVideoViewController.swift in Sources */,
 				0464EA5226B9417F00F6C92C /* ChatUserTableViewController.swift in Sources */,
 				04081DAB26B15487000E74D3 /* DialViewController.swift in Sources */,
 				04081D5626B12791000E74D3 /* AppDelegate.swift in Sources */,
@@ -437,11 +455,13 @@
 				04480AB426C3FF4A0059FA39 /* Encrypt_Decrypt.swift in Sources */,
 				04480AAE26C3A4080059FA39 /* MessageLinkCell.swift in Sources */,
 				04081DBA26B154C5000E74D3 /* FriendsViewController.swift in Sources */,
+				0406250B26E77D4A00028DBB /* TimeSpan.swift in Sources */,
 				04081D9B26B139D4000E74D3 /* TabBarViewController.swift in Sources */,
 				04DF1F5C26CF807200D7031E /* AboutUsViewController.swift in Sources */,
 				0441E97F26CE8C520054A0CD /* LanguageViewController.swift in Sources */,
 				0457057126CA3EE100CD863F /* MessageVideoCell.swift in Sources */,
 				04297F4726CB8A2600295510 /* MessageDocumentCell.swift in Sources */,
+				04B48F1A26E20693007FEC11 /* Theme.swift in Sources */,
 				04081D8D26B132E8000E74D3 /* Extensions.swift in Sources */,
 				0464EA1E26B9206200F6C92C /* MessageData.swift in Sources */,
 				04395E0626C636B6006EFA1C /* MessageContactCell.swift in Sources */,
@@ -625,12 +645,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VVIP_chat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jf.VVIP-chat";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vvip.broadlink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -643,12 +664,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VVIP_chat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jf.VVIP-chat";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vvip.broadlink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

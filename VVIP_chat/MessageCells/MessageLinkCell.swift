@@ -22,6 +22,8 @@ class MessageLinkCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         messageLink.text = nil
+        time.text = nil
+//        checkMark.image = nil
         leadingConstrint.isActive = false
         trailingConstraint.isActive = false
     }
@@ -70,13 +72,15 @@ class MessageLinkCell: UITableViewCell {
         self.time.text = message.time
         url = URL(string: String(ChatViewController().getLink(text: message.text)!))!
         if(message.isFirstUser){
-            messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1).withAlphaComponent(0.1)
+            messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1).withAlphaComponent(1.0)
             trailingConstraint.isActive = true
             checkMark.isHidden = false
+            time.textColor = .black
         } else {
             messageBackgroundView.backgroundColor = chatGray
             leadingConstrint.isActive = true
             checkMark.isHidden = true
+            time.textColor = .white
         }
     }
     

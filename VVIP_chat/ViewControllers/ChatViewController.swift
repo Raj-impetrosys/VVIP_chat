@@ -70,7 +70,7 @@ extension ChatViewController: ChatViewControllerDelegate{
     }
 }
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, WebSocketDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate & UIDocumentPickerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, MPMediaPickerControllerDelegate, UIDocumentInteractionControllerDelegate, AVAudioRecorderDelegate {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, WebSocketDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate & UIDocumentPickerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, MPMediaPickerControllerDelegate, UIDocumentInteractionControllerDelegate, AVAudioRecorderDelegate, UIContextMenuInteractionDelegate {
     
     @IBOutlet weak var messageTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
@@ -80,12 +80,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var mic: UIImageView!
     @IBOutlet weak var hstack: UIStackView!
     @IBOutlet weak var menu: UIBarButtonItem!
+    @IBOutlet weak var timeSpan: TimeSpan!
     
     var socket: WebSocket!
     var isConnected = false
     let server = WebSocketServer()
     let socketUrl: String = "ws://echo.websocket.org/"
-    let socketUrlSC: String = "https://api.rybitt.com"
+    //    let socketUrlSC: String = "https://api.rybitt.com"  //demo url
+    let socketUrlSC: String = "http://192.168.29.33:4000" //live url
     
     var manager: SocketManager!
     var soc: SocketIOClient!
@@ -107,6 +109,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     let firstAttribute : [NSAttributedString.Key : Any] = [.foregroundColor : UIColor.blue]
     let secondAttribute : [NSAttributedString.Key : Any] = [.foregroundColor : UIColor.blue]
     var useFirstAttribute: Bool = true
+    var isHiddenTimer: Bool = false
     
     var messages: [MessageData] = [
         MessageData(text: "Hey", isFirstUser: true, image: nil, contact: nil, location: nil, document: nil, messageType: .text, time: "6:00 AM"),
@@ -143,6 +146,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         generateSymmetricKey()
     }
     
+    private func hideSendBtn(){
+        UIView.animate(withDuration: 0.2) {
+            self.send.alpha = 0.2
+            self.send.isHidden = true
+        }
+    }
+    
+    private func showSendBtn(){
+        UIView.animate(withDuration: 0.2) {
+            self.send.alpha = 1.0
+            self.send.isHidden = false
+        }
+    }
+    
     func tableView(
         _ tableView: UITableView,
         contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint)
@@ -159,6 +176,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 UIAction(title: NSLocalizedString("Reply", comment: ""),
                          image: UIImage(systemName: "arrowshape.turn.up.left")) { action in
                     //                        self.performInspect()
+                    self.textField.becomeFirstResponder()
                 }
                 
                 let copy =
@@ -168,17 +186,27 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                         UIPasteboard.general.string = self.messages[index].text
                     }
                 
+                let forward =
+                    UIAction(title: NSLocalizedString("Forward", comment: ""),
+                             image: UIImage(systemName: "arrowshape.turn.up.right")) { action in
+                        print("Forward")
+                        //                        UIPasteboard.general.string = self.messages[index].text
+                        let vc = (self.storyboard?.instantiateViewController(identifier: "ChatUserTableViewController"))! as ChatUserTableViewController
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                
                 let delete =
                     UIAction(title: NSLocalizedString("Delete", comment: ""),
                              image: UIImage(systemName: "trash"),
                              attributes: .destructive) { action in
                         print("delete")
                         self.messages.remove(at: index)
-                        self.messageTableView.reloadData()
+                        //                        self.messageTableView.reloadData()
+                        self.messageTableView.deleteRows(at: [indexPath], with: .fade)
                         self.selectedMessage = nil
                     }
                 
-                return UIMenu(title: "Action", children: [reply, copy, delete])
+                return UIMenu(title: "Action", children: [reply, copy, forward, delete])
         }
     }
     
@@ -288,32 +316,42 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     //    }
     
     private func tableviewConfig(){
+        //        messageTableView.reloadData()
+        //        let indexPath = NSIndexPath(row: messages.count-1, section: 0)
+        //        messageTableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
         messageTableView.scrollToBottom()
+        //        self.messageTableView.contentInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
         //        messageTableView.contentOffset = CGPoint(x: 0, y: self.view.frame.maxY)
     }
     
     private func socketConfig(){
-        var request = URLRequest(url: URL(string: socketUrl)!) //https://localhost:8080
-        request.timeoutInterval = 5
-        socket = WebSocket(request: request)
-        socket.delegate = self
-        socket.connect()
+        //        var request = URLRequest(url: URL(string: socketUrl)!) //https://localhost:8080
+        //        request.timeoutInterval = 5
+        //        socket = WebSocket(request: request)
+        //        socket.delegate = self
+        //        socket.connect()
         
         manager = SocketManager(socketURL: URL(string: socketUrlSC)!, config: [.log(true), .compress])
         soc = manager.defaultSocket
+        //        let swiftSocket = manager.socket(forNamespace: "/swift")
         print(manager.status)
         
-        soc.connect()
+        
+        //        const socket = SocketIO('https://195.174.3.104:3000', { query: { myParam: 'myValue' } });
+        
+        
+        soc.connect();
         
         soc.on(clientEvent: .connect) {data, ack in
             print("socket connected")
             self.isConnected = true
+            print(data)
         }
         
-        soc.on(clientEvent: .disconnect) {data, ack in
-            print("socket disconnected")
-            self.isConnected = false
-        }
+        //        soc.on(clientEvent: .disconnect) {data, ack in
+        //            print("socket disconnected")
+        //            self.isConnected = false
+        //        }
         
     }
     
@@ -377,9 +415,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func onchange(_ sender: Any) {
         if(textField.text!.trimmingCharacters(in: .whitespaces) == ""){
-            send.isHidden = true
+            hideSendBtn()
         } else {
-            send.isHidden = false
+            showSendBtn()
         }
         self.messageType = .text
     }
@@ -441,7 +479,101 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let micGstr = UITapGestureRecognizer(target: self, action: #selector(micTapped))
         mic.addGestureRecognizer(micGstr)
+        
+        let timespanGstr = UITapGestureRecognizer(target: self, action: #selector(timeSpanTapped))
+        timeSpan.addGestureRecognizer(timespanGstr)
     }
+    
+    
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction,
+                                configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil,
+                                          previewProvider: nil,
+                                          actionProvider: {
+                                            suggestedActions in
+                                            let inspectAction =
+                                                UIAction(title: NSLocalizedString("InspectTitle", comment: ""),
+                                                         image: UIImage(systemName: "arrow.up.square")) { action in
+                                                    //                    self.performInspect()
+                                                }
+                                            
+                                            let duplicateAction =
+                                                UIAction(title: NSLocalizedString("DuplicateTitle", comment: ""),
+                                                         image: UIImage(systemName: "plus.square.on.square")) { action in
+                                                    //                    self.performDuplicate()
+                                                }
+                                            
+                                            let deleteAction =
+                                                UIAction(title: NSLocalizedString("DeleteTitle", comment: ""),
+                                                         image: UIImage(systemName: "trash"),
+                                                         attributes: .destructive) { action in
+                                                    //                    self.performDelete()
+                                                }
+                                            
+                                            return UIMenu(title: "", children: [inspectAction, duplicateAction, deleteAction])
+                                          })
+    }
+    
+    @objc func timeSpanTapped(){
+        print("time Span tapped")
+        //        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fire), userInfo: nil, repeats: true)
+        //        print(timer.fireDate)
+        //        let timerMenu = UIMenu(title: "", children: [
+        //            UIAction(title: NSLocalizedString("Notification", comment: ""), image: UIImage(systemName: "bell"), handler: {_ in}),
+        //            UIAction(title: NSLocalizedString("Logout", comment: ""), image: UIImage(systemName: "arrow.right.doc.on.clipboard"), handler: {_ in})
+        //        ])
+        //        let interaction = UIContextMenuInteraction(delegate: self)
+        //        timeSpan.addInteraction(interaction)
+        let timeView = UIView(frame: CGRect(x: 30, y: UIScreen.main.bounds.height*0.65, width: 100, height: 200))
+        timeView.backgroundColor = .white
+        timeView.layer.cornerRadius = 20
+        timeView.tag = 100
+        
+        let vStack = UIStackView()
+        vStack.axis = .vertical
+        vStack.translatesAutoresizingMaskIntoConstraints = false
+        //        vStack.bounds = timeView.bounds
+        
+        let time1 = UILabel(frame: CGRect(x: 0, y: 10, width: 100, height: 20))
+        time1.text = "20 sec"
+        vStack.addArrangedSubview(time1)
+        vStack.addArrangedSubview(time1)
+        vStack.addArrangedSubview(time1)
+        vStack.addArrangedSubview(time1)
+        
+        
+        
+        
+        //        vStack.centerXAnchor.constraint(equalTo: timeView.centerXAnchor).isActive = true
+        //        vStack.centerYAnchor.constraint(equalTo: timeView.centerYAnchor).isActive = true
+        
+        
+        timeView.addSubview(vStack)
+        
+        NSLayoutConstraint.activate([
+            vStack.topAnchor.constraint(equalTo: timeView.topAnchor),
+            vStack.leftAnchor.constraint(equalTo: timeView.leftAnchor),
+            vStack.rightAnchor.constraint(equalTo: timeView.rightAnchor),
+            vStack.heightAnchor.constraint(equalTo: timeView.heightAnchor)
+        ])
+        
+        if isHiddenTimer {
+            if let viewWithTag = self.view.viewWithTag(100) {
+                viewWithTag.removeFromSuperview()
+            } else {
+                print("tag not found")
+            }
+        } else {
+            self.view.addSubview(timeView)
+        }
+        isHiddenTimer.toggle()
+    }
+    
+    @objc func fire()
+    {
+        print("FIRE!!!")
+    }
+    
     
     @objc func cameraTapped(){
         print("camera tapped")
@@ -499,21 +631,31 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print(picker.mediaTypes)
-        //        let phPicker = PHPickerViewController()
+        //                let phPicker = PHPickerViewController()
         //        var url:String?
         var filename:String?
         switch picker.mediaTypes.first{
         case "public.movie":
             print("info.........: \(info)")
-            let videoURL = info[UIImagePickerController.InfoKey.referenceURL] as? URL
-            print(videoURL as Any)
-            path = videoURL
+            //            #if os(iOS 11.0)
+            //            let ignoredFiles = ["first", "second"]
+            //            #elseif os(macOS)
+            //            let ignoredFiles = []
+            //            #endif
+            //            let videoURL: URL!
+            if #available(iOS 11.0, *) {
+                path = info[UIImagePickerController.InfoKey.referenceURL] as? URL
+            } else {
+                path = info[UIImagePickerController.InfoKey.referenceURL] as? URL
+            }
+            //            print(videoURL as Any)
+            //            path = videoURL
             //            url = videoURL!.path
             print(path!)
-            let thumbnail = generateThumbnail1(url: videoURL!)
-            print(thumbnail!)
+            let thumbnail = generateThumbnail1(url: path!)
+            //            print(thumbnail!)
             self.pickedImage = thumbnail
-            filename = videoURL?.lastPathComponent
+            filename = path?.lastPathComponent
             messageType = .video
             
         case "public.image":
@@ -538,7 +680,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(info)
         
         self.textField.text = "\(String(describing: filename))"
-        self.send.isHidden = false
+        showSendBtn()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -605,13 +747,47 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         present(alert.fixConstraints(), animated: true)
     }
     
+    private func checkPermission(picker: UIImagePickerController) {
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        switch photoAuthorizationStatus {
+        case .authorized:
+            present(picker, animated: true, completion: nil)
+            print("Access is granted by user")
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({
+                (newStatus) in
+                print("status is \(newStatus)")
+                if newStatus ==  PHAuthorizationStatus.authorized {
+                    /* do stuff here */
+                    self.present(picker, animated: true, completion: nil)
+                    print("success")
+                }
+            })
+            print("It is not determined until now")
+        case .restricted:
+            // same same
+            print("User do not have access to photo album.")
+        case .denied:
+            // same same
+            print("User has denied the permission.")
+        case .limited:
+            print("limited")
+        @unknown default:
+            print("default")
+        }
+    }
+    
     func selectVideo() {
+        //        PHPhotoLibrary.requestAuthorization { (PHAuthorizationStatus) in
+        //            print(PHAuthorizationStatus)
+        //        }
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .savedPhotosAlbum
         picker.mediaTypes = ["public.movie"]
         picker.allowsEditing = false
-        present(picker, animated: true, completion: nil)
+        checkPermission(picker: picker)
+        //        present(picker, animated: true, completion: nil)
     }
     
     private func selectAudio(){
@@ -694,7 +870,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
                 self.pickedContact = ContactData(phones: numbers, image: self.pickedContactImage)
                 self.textField.text = contact.givenName + " " + contact.familyName//+"\n"+"\(numbers)"
-                self.send.isHidden = false
+                self.showSendBtn()
                 self.messageType = .contact
             })
         }
@@ -723,7 +899,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             alert.addAction(.init(title: "OK", style: .cancel))
             present(alert, animated: true, completion: nil)
             self.textField.text = "\(location)"
-            self.send.isHidden = false
+            showSendBtn()
             self.messageType = .location
         }
     }
@@ -759,7 +935,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
     private func selectFiles() {
         //        let types = UTType.types(tag: "doc",
         //                                 tagClass: UTTagClass.filenameExtension,
@@ -781,7 +956,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         path = myURL
         self.textField.text = myURL.lastPathComponent
         //        self.textField.text = "\(myURL)"
-        self.send.isHidden = false
+        showSendBtn()
         messageType = .document
     }
     
@@ -811,7 +986,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func recordViewConfig(){
         label.textAlignment = .left
-//        label.text = "Recording: "+audioRecorder.currentTime.description
+        //        label.text = "Recording: "+audioRecorder.currentTime.description
         label.textColor = .red
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveLinear], animations: {
             self.hideBtns(hide: true, alpha: 0.2)
@@ -941,7 +1116,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(recorder.url)
         path = recorder.url
         self.textField.text = recorder.url.lastPathComponent
-        self.send.isHidden = false
+        showSendBtn()
         messageType = .document
     }
     
@@ -976,14 +1151,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             let msg = MessageData(text: messageText, isFirstUser: true, image: imageData(image: pickedImage, url: path), contact: pickedContact,location: pickedLocation, document: path, messageType: messageType, time: time)
             
             messages.append(msg)
-            sendBySocket(messageText: messageText)
+            self.messageTableView.beginUpdates()
+            self.messageTableView.insertRows(at: [IndexPath.init(row: self.messages.count-1, section: 0)], with: .left)
+            self.messageTableView.endUpdates()
+            sendBySocket(messageText: messageText, messageData: msg)
             //            print(messages)
-            messageTableView.reloadData()
+            //            messageTableView.reloadData()
             //            textField.text = ""
             prepareForReuse()
-            UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveLinear], animations: {
-                self.send.isHidden = true
-            }, completion: nil)
+            hideSendBtn()
             messageTableView.scrollToBottom()
         }
         else{
@@ -1004,7 +1180,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageType = .text
     }
     
-    private func sendBySocket(messageText:String){
+    private func sendBySocket(messageText:String, messageData: MessageData){
         var encryptedMessage: String = ""
         do{
             encryptedMessage = try encrypt(text: messageText, symmetricKey: mysymmetricKey)
@@ -1015,7 +1191,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let decryptedMessage:String = decrypt(text: encryptedMessage, symmetricKey: othersymmetricKey)
         print("decryptedMessage: \(decryptedMessage)")
         //        socket.write(string: messageText)
-        socket.write(string: encryptedMessage)
+        //        socket.write(string: encryptedMessage)
         //        soc.on(clientEvent: .connect){(data, ack) in
         //            print("socket connected")
         //            self.soc.emit("Raj", messageText)
@@ -1029,21 +1205,39 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         //            print("socket connected")
         //        }
         
-        soc.on("currentAmount") {data, ack in
-            guard let cur = data[0] as? Double else { return }
+        struct CustomData : SocketData {
+            let name: String
+            let age: Int
+            let image: String
             
-            self.soc.emitWithAck("canUpdate", cur).timingOut(after: 0) {data in
-                if data.first as? String ?? "passed" == SocketAckStatus.noAck {
-                    // Handle ack timeout
-                }
-                
-                self.soc.emit("update", ["amount": cur + 2.50])
+            func socketRepresentation() -> SocketData {
+                return ["name": name, "age": age, "image": image]
             }
-            
-            ack.with("Got your currentAmount", "dude")
         }
         
-        soc.connect()
+        let image: UIImage? = pickedImage ?? UIImage(systemName: "person")
+        let base64encoding = image?.jpegData(compressionQuality: 1)?.base64EncodedString() ?? ""
+        
+        soc.emit("Raj", CustomData(name: "Raj", age: 25, image: base64encoding))
+
+        
+
+        
+        //        soc.on("currentAmount") {data, ack in
+        //            guard let cur = data[0] as? Double else { return }
+        //
+        //            self.soc.emitWithAck("canUpdate", cur).timingOut(after: 0) {data in
+        //                if data.first as? String ?? "passed" == SocketAckStatus.noAck {
+        //                    // Handle ack timeout
+        //                }
+        //
+        //                self.soc.emit("update", ["amount": cur + 2.50])
+        //            }
+        //
+        //            ack.with("Got your currentAmount", "dude")
+        //        }
+        
+        //        soc.connect()
     }
     
     private func navConfig(){
@@ -1080,7 +1274,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         subtitle.textColor = .white
         subtitle.font = UIFont.boldSystemFont(ofSize: 14)
         subtitle.frame = CGRect(x: 45, y: 20, width: 100, height: 20)
-        
         
         titleView.addSubview(imageView)
         titleView.addSubview(title)
@@ -1196,39 +1389,4 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         //                print("selected item \(indexPath.row)")
     }
     
-}
-
-extension ChatViewController: UIContextMenuInteractionDelegate {
-    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
-        let identifier = "\(String(describing: index))" as NSString
-        return UIContextMenuConfiguration(
-            identifier: identifier,
-            previewProvider: nil) { _ in
-            // 3
-            let reply =
-                UIAction(title: NSLocalizedString("Reply", comment: ""),
-                         image: UIImage(systemName: "arrowshape.turn.up.left")) { action in
-                    //                        self.performInspect()
-                }
-                
-                let copy =
-                    UIAction(title: NSLocalizedString("Copy", comment: ""),
-                             image: UIImage(systemName: "doc.on.doc")) { action in
-                        print("Copy")
-                        //                        UIPasteboard.general.string = self.messages[index].text
-                    }
-                
-                let delete =
-                    UIAction(title: NSLocalizedString("Delete", comment: ""),
-                             image: UIImage(systemName: "trash"),
-                             attributes: .destructive) { action in
-                        print("delete")
-                        //                        self.messages.remove(at: index)
-                        self.messageTableView.reloadData()
-                        self.selectedMessage = nil
-                    }
-                
-                return UIMenu(title: "Action", children: [reply, copy, delete])
-        }
-    }
 }

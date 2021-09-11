@@ -12,7 +12,7 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var checkMark: UIImageView!
-
+    
     var trailingConstraint : NSLayoutConstraint!
     var leadingConstrint : NSLayoutConstraint!
     var chatGray = UIColor(red: 69/255.0, green: 90/255.0, blue: 100/255.0, alpha: 1)
@@ -21,6 +21,8 @@ class MessageTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         messageLabel.text = nil
+        time.text = nil
+//        checkMark.image = nil
         leadingConstrint.isActive = false
         trailingConstraint.isActive = false
     }
@@ -51,15 +53,19 @@ class MessageTableViewCell: UITableViewCell {
         if(message.isFirstUser){
             messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1)
             trailingConstraint.isActive = true
-//            messageLabel.textAlignment = .left
+            //            messageLabel.textAlignment = .left
             checkMark.isHidden = false
-//            isMe = true
+            //            isMe = true
+            messageLabel.textColor = .black
+            time.textColor = .black
         } else {
             messageBackgroundView.backgroundColor = chatGray
             leadingConstrint.isActive = true
-//            messageLabel.textAlignment = .left
+            //            messageLabel.textAlignment = .left
             checkMark.isHidden = true
-//            isMe = false
+            //            isMe = false
+            messageLabel.textColor = .white
+            time.textColor = .white
         }
     }
 }

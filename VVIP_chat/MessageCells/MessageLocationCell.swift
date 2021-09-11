@@ -24,7 +24,9 @@ class MessageLocationCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        //            messageImage.image = nil
+        messageLocationView.showsUserLocation = false
+        time.text = nil
+//        checkMark.image = nil
         leadingConstrint.isActive = false
         trailingConstraint.isActive = false
     }
@@ -42,8 +44,8 @@ class MessageLocationCell: UITableViewCell {
         messageLocationView.addAnnotation(annotation)
         //        messageLocationView.isScrollEnabled = true
         //        messageLocationView.isZoomEnabled = true
-        messageLocationView.showsCompass = true;
-        messageLocationView.showsUserLocation = true
+        //        messageLocationView.showsCompass = true;
+        //        messageLocationView.showsUserLocation = true
         let region: MKCoordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         messageLocationView.setRegion(region, animated: true)
     }
@@ -96,10 +98,12 @@ class MessageLocationCell: UITableViewCell {
             messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1)
             trailingConstraint.isActive = true
             checkMark.isHidden = false
+            time.textColor = .black
         } else {
             messageBackgroundView.backgroundColor = chatGray
             leadingConstrint.isActive = true
             checkMark.isHidden = true
+            time.textColor = .white
         }
     }
     

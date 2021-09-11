@@ -33,7 +33,7 @@ class ChatUserTableViewController: UITableViewController {
                 }),
             ]
         }
-
+        
         var demoMenu: UIMenu {
             return UIMenu(title: "My menu", image: nil, identifier: nil, options: [], children: menuItems)
         }
@@ -66,12 +66,12 @@ class ChatUserTableViewController: UITableViewController {
         print("selected item \(indexPath.row)")
         
         vc = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
-        switch indexPath.row {
-        case 0:
-            vc = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
-        default:
-            vc = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
-        }
+        //        switch indexPath.row {
+        //        case 0:
+        //            vc = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        //        default:
+        //            vc = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        //        }
         self.navigationController?.pushViewController(vc!, animated: true)
         
         //        dismiss(animated: true, completion: nil)

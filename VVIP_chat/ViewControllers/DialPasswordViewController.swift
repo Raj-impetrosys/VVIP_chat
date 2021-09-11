@@ -128,7 +128,7 @@ class DialPasswordViewController: UIViewController {
     
     @objc func enterPwdPressed(sender : UITapGestureRecognizer) {
         print("Enter pwd tapped")
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
         if(!dialScreenLbl.text!.isEmpty){
             let tabBarController = TabBarViewController()
             tabBarController.selectedIndex = 1

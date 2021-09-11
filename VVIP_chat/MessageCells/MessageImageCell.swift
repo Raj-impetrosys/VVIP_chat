@@ -23,6 +23,8 @@ class MessageImageCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         messageImage.image = nil
+        time.text = nil
+//        checkMark.image = nil
         leadingConstrint.isActive = false
         trailingConstraint.isActive = false
     }
@@ -69,10 +71,12 @@ class MessageImageCell: UITableViewCell {
             messageBackgroundView.backgroundColor = #colorLiteral(red: 0.293738246, green: 0.6559162736, blue: 0.8622517586, alpha: 1)
             trailingConstraint.isActive = true
             checkMark.isHidden = false
+            time.textColor = .black
         } else {
             messageBackgroundView.backgroundColor = chatGray
             leadingConstrint.isActive = true
             checkMark.isHidden = true
+            time.textColor = .white
         }
     }
     
