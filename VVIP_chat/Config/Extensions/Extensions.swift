@@ -111,35 +111,6 @@ func utType(ext: String) -> UTType{
     return UTType.types(tag: ext, tagClass: .filenameExtension, conformingTo: nil).first!
 }
 
-extension UITableView {
-    
-    func scrollToBottom(){
-        
-        DispatchQueue.main.async {
-            let indexPath = IndexPath(
-                row: self.numberOfRows(inSection:  self.numberOfSections-1) - 1,
-                section: self.numberOfSections - 1)
-            if self.hasRowAtIndexPath(indexPath: indexPath) {
-                self.scrollToRow(at: indexPath, at: .bottom, animated: false)
-            }
-        }
-    }
-    
-    func scrollToTop() {
-        
-        DispatchQueue.main.async {
-            let indexPath = IndexPath(row: 0, section: 0)
-            if self.hasRowAtIndexPath(indexPath: indexPath) {
-                self.scrollToRow(at: indexPath, at: .top, animated: true)
-            }
-        }
-    }
-    
-    func hasRowAtIndexPath(indexPath: IndexPath) -> Bool {
-        return indexPath.section < self.numberOfSections && indexPath.row < self.numberOfRows(inSection: indexPath.section)
-    }
-}
-
 extension UIView {
     func callRecursively(_ body: (_ subview: UIView) -> Void) {
         body(self)
@@ -155,27 +126,6 @@ extension UIAlertController {
                 .forEach({ $0.priority = UILayoutPriority(rawValue: 999)})
         }
         return self
-    }
-}
-
-extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-            }
-        }.resume()
-    }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        downloaded(from: url, contentMode: mode)
     }
 }
 

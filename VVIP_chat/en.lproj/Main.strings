@@ -1,0 +1,624 @@
+
+/* Class = "UITabBarItem"; title = "Calls"; ObjectID = "00D-ld-pS1"; */
+"00D-ld-pS1.title" = "Calls";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "0b5-Ht-aCF"; */
+"0b5-Ht-aCF.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "11B-C7-UYh"; */
+"11B-C7-UYh.text" = "User One";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "15d-Uc-jxa"; */
+"15d-Uc-jxa.text" = "3";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "1Lf-QS-O7f"; */
+"1Lf-QS-O7f.text" = "2";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "1aR-1o-Alq"; */
+"1aR-1o-Alq.text" = "0";
+
+/* Class = "UILabel"; text = "9.00 AM"; ObjectID = "1lm-pt-hfx"; */
+"1lm-pt-hfx.text" = "9.00 AM";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "1mF-jW-RqW"; */
+"1mF-jW-RqW.placeholder" = "Enter title";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "2dk-EB-gJx"; */
+"2dk-EB-gJx.text" = "9";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "2hl-Jh-e0Z"; */
+"2hl-Jh-e0Z.text" = "User One";
+
+/* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "3JA-JI-amM"; */
+"3JA-JI-amM.text" = "-> (2) November 26, 7:30 PM";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "3Rh-wy-h5a"; */
+"3Rh-wy-h5a.title" = "Item";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "4zu-oQ-yXu"; */
+"4zu-oQ-yXu.text" = "Email";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "5Mo-Fu-CZR"; */
+"5Mo-Fu-CZR.text" = "1";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "5OZ-gp-DTC"; */
+"5OZ-gp-DTC.placeholder" = "Enter title";
+
+/* Class = "UIViewController"; title = "SetPhotoVideoViewController"; ObjectID = "626-AX-VhT"; */
+"626-AX-VhT.title" = "SetPhotoVideoViewController";
+
+/* Class = "UILabel"; text = "Manage Accounts"; ObjectID = "6dn-eZ-KVS"; */
+"6dn-eZ-KVS.text" = "Manage Accounts";
+
+/* Class = "UIViewController"; title = "Dial Player Code"; ObjectID = "77N-bj-4q4"; */
+"77N-bj-4q4.title" = "Dial Player Code";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "7Jh-Jj-Ggq"; */
+"7Jh-Jj-Ggq.title" = "Item";
+
+/* Class = "UILabel"; text = "7"; ObjectID = "7K5-Gq-o0J"; */
+"7K5-Gq-o0J.text" = "7";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "7dG-Oc-fcL"; */
+"7dG-Oc-fcL.title" = "Settings";
+
+/* Class = "UIViewController"; title = "Dial Number"; ObjectID = "7ft-RF-Tpj"; */
+"7ft-RF-Tpj.title" = "Dial Number";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "7w7-Bs-pfy"; */
+"7w7-Bs-pfy.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "9999"; ObjectID = "85E-um-Xcr"; */
+"85E-um-Xcr.text" = "9999";
+
+/* Class = "UILabel"; text = "Enter Server ID"; ObjectID = "8NQ-Nl-cW6"; */
+"8NQ-Nl-cW6.text" = "Enter Server ID";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "8YQ-XC-ZDZ"; */
+"8YQ-XC-ZDZ.placeholder" = "Enter title";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "8li-P4-3x9"; */
+"8li-P4-3x9.text" = "User One";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "8o2-yZ-ovB"; */
+"8o2-yZ-ovB.text" = "1";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "9qb-Vf-GVx"; */
+"9qb-Vf-GVx.text" = "9";
+
+/* Class = "UILabel"; text = "Time set"; ObjectID = "9za-Ts-urJ"; */
+"9za-Ts-urJ.text" = "Time set";
+
+/* Class = "UITextField"; placeholder = "User Name"; ObjectID = "AAX-d8-n13"; */
+"AAX-d8-n13.placeholder" = "User Name";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "APh-E5-MeS"; */
+"APh-E5-MeS.placeholder" = "Enter title";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "AVo-US-pu6"; */
+"AVo-US-pu6.text" = "User One";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "AnQ-tR-59I"; */
+"AnQ-tR-59I.text" = "5";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "B3C-lW-cWz"; */
+"B3C-lW-cWz.text" = "User One";
+
+/* Class = "UILabel"; text = "Doc Name"; ObjectID = "B7a-6q-L6s"; */
+"B7a-6q-L6s.text" = "Doc Name";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "BjI-g1-9Wc"; */
+"BjI-g1-9Wc.text" = "User One";
+
+/* Class = "UIViewController"; title = "AppearenceViewController"; ObjectID = "Bk9-dR-MDc"; */
+"Bk9-dR-MDc.title" = "AppearenceViewController";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Bko-Ol-cYF"; */
+"Bko-Ol-cYF.text" = "9";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "ChB-ac-ufE"; */
+"ChB-ac-ufE.text" = "5";
+
+/* Class = "UILabel"; text = "9897856662"; ObjectID = "ChQ-uN-KHT"; */
+"ChQ-uN-KHT.text" = "9897856662";
+
+/* Class = "UILabel"; text = "7"; ObjectID = "CqN-Ru-Po0"; */
+"CqN-Ru-Po0.text" = "7";
+
+/* Class = "UILabel"; text = "Two-Step Verification"; ObjectID = "DGf-JD-jen"; */
+"DGf-JD-jen.text" = "Two-Step Verification";
+
+/* Class = "UITabBarItem"; title = "Dial"; ObjectID = "DS1-8o-Rgm"; */
+"DS1-8o-Rgm.title" = "Dial";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "Dir-HY-Anl"; */
+"Dir-HY-Anl.text" = "2";
+
+/* Class = "UITabBarItem"; title = "Dial"; ObjectID = "Dp6-4V-PVC"; */
+"Dp6-4V-PVC.title" = "Dial";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "E4X-Hu-dwM"; */
+"E4X-Hu-dwM.placeholder" = "Enter title";
+
+/* Class = "UIBarButtonItem"; title = "video"; ObjectID = "ERT-aC-Od7"; */
+"ERT-aC-Od7.title" = "video";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "ERj-eh-gDD"; */
+"ERj-eh-gDD.text" = "Title";
+
+/* Class = "UILabel"; text = "Block"; ObjectID = "EcZ-oi-UVe"; */
+"EcZ-oi-UVe.text" = "Block";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "Eed-zC-tmc"; */
+"Eed-zC-tmc.placeholder" = "Enter title";
+
+/* Class = "UILabel"; text = "PDF"; ObjectID = "EuK-sE-xX7"; */
+"EuK-sE-xX7.text" = "PDF";
+
+/* Class = "UIViewController"; title = "SettingViewController"; ObjectID = "F35-wW-vuK"; */
+"F35-wW-vuK.title" = "SettingViewController";
+
+/* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "F6E-wD-0N1"; */
+"F6E-wD-0N1.text" = "-> (2) November 26, 7:30 PM";
+
+/* Class = "UIViewController"; title = "PrivacyAndSecuritiesViewController"; ObjectID = "FYk-4L-B6t"; */
+"FYk-4L-B6t.title" = "PrivacyAndSecuritiesViewController";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "G8C-9x-xLY"; */
+"G8C-9x-xLY.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Gdi-dw-gnM"; */
+"Gdi-dw-gnM.title" = "Item";
+
+/* Class = "UILabel"; text = "9.00 AM"; ObjectID = "HSH-6t-3gd"; */
+"HSH-6t-3gd.text" = "9.00 AM";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "HYL-RI-6BR"; */
+"HYL-RI-6BR.title" = "Save";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "I0d-80-5nK"; */
+"I0d-80-5nK.text" = "6";
+
+/* Class = "UILabel"; text = "Enter PIN"; ObjectID = "I7H-tV-xLX"; */
+"I7H-tV-xLX.text" = "Enter PIN";
+
+/* Class = "UIBarButtonItem"; title = "ellipsis"; ObjectID = "ILe-KS-nBK"; */
+"ILe-KS-nBK.title" = "ellipsis";
+
+/* Class = "UILabel"; text = "Current Login must use password lock"; ObjectID = "IxO-Fb-Q1k"; */
+"IxO-Fb-Q1k.text" = "Current Login must use password lock";
+
+/* Class = "UILabel"; text = "9.00 AM"; ObjectID = "JSa-bb-jTb"; */
+"JSa-bb-jTb.text" = "9.00 AM";
+
+/* Class = "UILabel"; text = "+91 9977783414"; ObjectID = "K0k-h7-yU7"; */
+"K0k-h7-yU7.text" = "+91 9977783414";
+
+/* Class = "UITabBarItem"; title = "Dial"; ObjectID = "KFX-dh-UEX"; */
+"KFX-dh-UEX.title" = "Dial";
+
+/* Class = "UIViewController"; title = "Chat View Controller"; ObjectID = "KIg-lB-B7M"; */
+"KIg-lB-B7M.title" = "Chat View Controller";
+
+/* Class = "UILabel"; text = "Off >"; ObjectID = "KNl-7b-OVi"; */
+"KNl-7b-OVi.text" = "Off >";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "KbA-l4-vEV"; */
+"KbA-l4-vEV.text" = "User One";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "L6J-bc-WL6"; */
+"L6J-bc-WL6.text" = "8";
+
+/* Class = "UILabel"; text = "None >"; ObjectID = "LT8-Sj-KYU"; */
+"LT8-Sj-KYU.text" = "None >";
+
+/* Class = "UINavigationItem"; title = "About Us"; ObjectID = "Lgq-WU-uyL"; */
+"Lgq-WU-uyL.title" = "About Us";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "M7H-S1-ZVl"; */
+"M7H-S1-ZVl.text" = "4";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "MRd-eG-CSP"; */
+"MRd-eG-CSP.text" = "User One";
+
+/* Class = "UILabel"; text = "Privacy and securities"; ObjectID = "MVb-js-vC4"; */
+"MVb-js-vC4.text" = "Privacy and securities";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "MYh-CS-B7U"; */
+"MYh-CS-B7U.text" = "1";
+
+/* Class = "UILabel"; text = "9.00 AM"; ObjectID = "Mds-s3-Szx"; */
+"Mds-s3-Szx.text" = "9.00 AM";
+
+/* Class = "UIViewController"; title = "LanguageViewController"; ObjectID = "NB2-Ny-zE1"; */
+"NB2-Ny-zE1.title" = "LanguageViewController";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "NMo-U9-WTN"; */
+"NMo-U9-WTN.text" = "0";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "Nv6-7x-x25"; */
+"Nv6-7x-x25.text" = "User One";
+
+/* Class = "UILabel"; text = "State"; ObjectID = "ONU-MZ-AgV"; */
+"ONU-MZ-AgV.text" = "State";
+
+/* Class = "UILabel"; text = "Blair Data"; ObjectID = "OS0-s2-cY0"; */
+"OS0-s2-cY0.text" = "Blair Data";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "OUS-IM-NeF"; */
+"OUS-IM-NeF.text" = "User One";
+
+/* Class = "UINavigationItem"; title = "Edit Profile"; ObjectID = "OwK-cO-f86"; */
+"OwK-cO-f86.title" = "Edit Profile";
+
+/* Class = "UILabel"; text = "This mode is On for entering 3 times incorrect password, the messages all clear"; ObjectID = "P13-j9-vSO"; */
+"P13-j9-vSO.text" = "This mode is On for entering 3 times incorrect password, the messages all clear";
+
+/* Class = "UIBarButtonItem"; title = "edit"; ObjectID = "P5g-vS-6hD"; */
+"P5g-vS-6hD.title" = "edit";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "PIQ-0B-wVm"; */
+"PIQ-0B-wVm.title" = "Item";
+
+/* Class = "UILabel"; text = "Set a new photo or video"; ObjectID = "PKj-w9-a4H"; */
+"PKj-w9-a4H.text" = "Set a new photo or video";
+
+/* Class = "UILabel"; text = "Lorium ipsum dolor emet"; ObjectID = "Pt8-0s-ti5"; */
+"Pt8-0s-ti5.text" = "Lorium ipsum dolor emet";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "PxD-Sg-z7D"; */
+"PxD-Sg-z7D.text" = "8";
+
+/* Class = "UILabel"; text = "7"; ObjectID = "Q7P-3p-gIW"; */
+"Q7P-3p-gIW.text" = "7";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "QQj-fF-lB7"; */
+"QQj-fF-lB7.text" = "0";
+
+/* Class = "UINavigationItem"; title = "Privacy And Securities"; ObjectID = "Qeo-LE-2g5"; */
+"Qeo-LE-2g5.title" = "Privacy And Securities";
+
+/* Class = "UILabel"; text = "Mute notifications"; ObjectID = "QgR-8e-o6U"; */
+"QgR-8e-o6U.text" = "Mute notifications";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "RL6-1Z-qqF"; */
+"RL6-1Z-qqF.text" = "4";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "RVe-wb-LFo"; */
+"RVe-wb-LFo.text" = "User One";
+
+/* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "RWb-Oj-CiY"; */
+"RWb-Oj-CiY.text" = "-> (2) November 26, 7:30 PM";
+
+/* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "SDb-2v-N5p"; */
+"SDb-2v-N5p.text" = "-> (2) November 26, 7:30 PM";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "SGx-Py-JOX"; */
+"SGx-Py-JOX.title" = "Item";
+
+/* Class = "UILabel"; text = "999999"; ObjectID = "SJ1-eu-Xzh"; */
+"SJ1-eu-Xzh.text" = "999999";
+
+/* Class = "UIViewController"; title = "EditProfileViewController"; ObjectID = "SJq-wz-8u9"; */
+"SJq-wz-8u9.title" = "EditProfileViewController";
+
+/* Class = "UILabel"; text = "New"; ObjectID = "SVK-EM-pGw"; */
+"SVK-EM-pGw.text" = "New";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "Sb0-7b-gDe"; */
+"Sb0-7b-gDe.text" = "English";
+
+/* Class = "UILabel"; text = "7"; ObjectID = "Spl-fN-M4T"; */
+"Spl-fN-M4T.text" = "7";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "TFy-ZF-q7D"; */
+"TFy-ZF-q7D.title" = "Settings";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "TJe-Nu-xXW"; */
+"TJe-Nu-xXW.title" = "Item";
+
+/* Class = "UILabel"; text = "Add Numbers"; ObjectID = "TNT-P7-pk4"; */
+"TNT-P7-pk4.text" = "Add Numbers";
+
+/* Class = "UITabBarItem"; title = "Friends"; ObjectID = "TmF-WX-SE0"; */
+"TmF-WX-SE0.title" = "Friends";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "U9S-XD-gcb"; */
+"U9S-XD-gcb.text" = "Country";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "UHe-jf-Ile"; */
+"UHe-jf-Ile.text" = "6";
+
+/* Class = "UILabel"; text = "9.00 AM"; ObjectID = "URY-lk-K59"; */
+"URY-lk-K59.text" = "9.00 AM";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "UYE-Tu-YKc"; */
+"UYE-Tu-YKc.text" = "First Name";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "UeU-cE-08o"; */
+"UeU-cE-08o.text" = "0";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "Utv-EM-LlK"; */
+"Utv-EM-LlK.text" = "4";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Uut-cl-R3F"; */
+"Uut-cl-R3F.text" = "1";
+
+/* Class = "UILabel"; text = "8.3 kB"; ObjectID = "V9B-Wl-hYd"; */
+"V9B-Wl-hYd.text" = "8.3 kB";
+
+/* Class = "UITextField"; placeholder = "Type a message"; ObjectID = "VIG-fJ-lyv"; */
+"VIG-fJ-lyv.placeholder" = "Type a message";
+
+/* Class = "UITabBarItem"; title = "Dial"; ObjectID = "VRa-cW-JYy"; */
+"VRa-cW-JYy.title" = "Dial";
+
+/* Class = "UILabel"; text = "Enter Player Code"; ObjectID = "VSs-Qc-m11"; */
+"VSs-Qc-m11.text" = "Enter Player Code";
+
+/* Class = "UILabel"; text = "Next"; ObjectID = "VYy-14-sbw"; */
+"VYy-14-sbw.text" = "Next";
+
+/* Class = "UILabel"; text = "text message"; ObjectID = "W4K-Y4-VAu"; */
+"W4K-Y4-VAu.text" = "text message";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "W9Y-VJ-oLJ"; */
+"W9Y-VJ-oLJ.text" = "User One";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "WDc-Vl-pWk"; */
+"WDc-Vl-pWk.text" = "8";
+
+/* Class = "UINavigationItem"; title = "Language"; ObjectID = "X08-e3-o8Z"; */
+"X08-e3-o8Z.title" = "Language";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "XXn-iT-uJD"; */
+"XXn-iT-uJD.text" = "User One";
+
+/* Class = "UILabel"; text = "Password Lock"; ObjectID = "Yp6-Pf-7Iw"; */
+"Yp6-Pf-7Iw.text" = "Password Lock";
+
+/* Class = "UILabel"; text = "7"; ObjectID = "ZBT-cy-y6b"; */
+"ZBT-cy-y6b.text" = "7";
+
+/* Class = "UITableViewController"; title = "Chat User Table View Controller"; ObjectID = "aGD-on-U69"; */
+"aGD-on-U69.title" = "Chat User Table View Controller";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "aLd-Id-RKV"; */
+"aLd-Id-RKV.text" = "Language";
+
+/* Class = "UILabel"; text = "About and Phone Number"; ObjectID = "bg7-CI-6la"; */
+"bg7-CI-6la.text" = "About and Phone Number";
+
+/* Class = "UILabel"; text = "Zip"; ObjectID = "boU-An-8lh"; */
+"boU-An-8lh.text" = "Zip";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "brX-g8-crN"; */
+"brX-g8-crN.title" = "Item";
+
+/* Class = "UILabel"; text = "About us"; ObjectID = "c43-Gb-Ydu"; */
+"c43-Gb-Ydu.text" = "About us";
+
+/* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "c4Z-qV-zvr"; */
+"c4Z-qV-zvr.text" = "-> (2) November 26, 7:30 PM";
+
+/* Class = "UILabel"; text = "中国人"; ObjectID = "c7S-dd-oeg"; */
+"c7S-dd-oeg.text" = "中国人";
+
+/* Class = "UIViewController"; title = "Dial Pin"; ObjectID = "cQC-j1-Dgt"; */
+"cQC-j1-Dgt.title" = "Dial Pin";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "cjd-MB-dRM"; */
+"cjd-MB-dRM.text" = "8";
+
+/* Class = "UIViewController"; title = "Dial Server ID"; ObjectID = "dFX-2k-mjj"; */
+"dFX-2k-mjj.title" = "Dial Server ID";
+
+/* Class = "UILabel"; text = "\"PIN\""; ObjectID = "dHP-St-b9E"; */
+"dHP-St-b9E.text" = "\"PIN\"";
+
+/* Class = "UINavigationItem"; title = "Contacts"; ObjectID = "ddN-lc-myK"; */
+"ddN-lc-myK.title" = "Contacts";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "dgO-iu-Md4"; */
+"dgO-iu-Md4.text" = "3";
+
+/* Class = "UILabel"; text = "Team One"; ObjectID = "drq-Vn-SLF"; */
+"drq-Vn-SLF.text" = "Team One";
+
+/* Class = "UILabel"; text = "405"; ObjectID = "dyW-gU-JNb"; */
+"dyW-gU-JNb.text" = "405";
+
+/* Class = "UIBarButtonItem"; title = "menu"; ObjectID = "e3O-9Z-sT4"; */
+"e3O-9Z-sT4.title" = "menu";
+
+/* Class = "UIButton"; normalTitle = "Change Theme"; ObjectID = "e8q-hM-ebc"; */
+"e8q-hM-ebc.normalTitle" = "Change Theme";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "eKK-LK-dAk"; */
+"eKK-LK-dAk.title" = "Item";
+
+/* Class = "UILabel"; text = "Network Link"; ObjectID = "ems-qm-azY"; */
+"ems-qm-azY.text" = "Network Link";
+
+/* Class = "UIBarButtonItem"; title = "call"; ObjectID = "ex5-Em-Rn6"; */
+"ex5-Em-Rn6.title" = "call";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "f4B-io-646"; */
+"f4B-io-646.text" = "3";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "fA0-Hb-GMg"; */
+"fA0-Hb-GMg.text" = "2";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "faf-dh-Mhj"; */
+"faf-dh-Mhj.text" = "User One";
+
+/* Class = "UILabel"; text = "Blocked user"; ObjectID = "fnC-Z6-N9S"; */
+"fnC-Z6-N9S.text" = "Blocked user";
+
+/* Class = "UIViewController"; title = "ManageAccountViewController"; ObjectID = "gGn-Ws-eWZ"; */
+"gGn-Ws-eWZ.title" = "ManageAccountViewController";
+
+/* Class = "UILabel"; text = "9.00 AM"; ObjectID = "gIp-Th-C8g"; */
+"gIp-Th-C8g.text" = "9.00 AM";
+
+/* Class = "UILabel"; text = "Pre-set time burning"; ObjectID = "gJQ-38-UlW"; */
+"gJQ-38-UlW.text" = "Pre-set time burning";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "gRk-09-mj2"; */
+"gRk-09-mj2.text" = "9";
+
+/* Class = "UITabBarItem"; title = "Chat"; ObjectID = "gg0-oT-TDh"; */
+"gg0-oT-TDh.title" = "Chat";
+
+/* Class = "UILabel"; text = "Designation"; ObjectID = "gp1-Ep-aGe"; */
+"gp1-Ep-aGe.text" = "Designation";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "h0q-9p-BsZ"; */
+"h0q-9p-BsZ.title" = "Item";
+
+/* Class = "UILabel"; text = "Logout"; ObjectID = "h5x-UP-tZX"; */
+"h5x-UP-tZX.text" = "Logout";
+
+/* Class = "UILabel"; text = "10:55 AM"; ObjectID = "hgB-7C-PHs"; */
+"hgB-7C-PHs.text" = "10:55 AM";
+
+/* Class = "UINavigationItem"; title = "Appearence"; ObjectID = "i8b-TZ-A6N"; */
+"i8b-TZ-A6N.title" = "Appearence";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "iJw-aA-PgN"; */
+"iJw-aA-PgN.text" = "4";
+
+/* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "img-oC-bWh"; */
+"img-oC-bWh.text" = "-> (2) November 26, 7:30 PM";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "j6F-MN-utn"; */
+"j6F-MN-utn.text" = "0";
+
+/* Class = "UILabel"; text = "VVIP chat from VVIP is a FREE messaging and video calling app. It’s used by over 2B people in more than 180 countries. It’s simple, reliable, and private, so you can easily keep in touch with your friends and family. VVIP works across mobile and desktop even on slow connections, with no subscription fees*."; ObjectID = "jJC-Dv-Y3U"; */
+"jJC-Dv-Y3U.text" = "VVIP chat from VVIP is a FREE messaging and video calling app. It’s used by over 2B people in more than 180 countries. It’s simple, reliable, and private, so you can easily keep in touch with your friends and family. VVIP works across mobile and desktop even on slow connections, with no subscription fees*.";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "jYl-D7-VyS"; */
+"jYl-D7-VyS.text" = "3";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "l2z-Sm-gfQ"; */
+"l2z-Sm-gfQ.text" = "2";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "lWW-Af-FNG"; */
+"lWW-Af-FNG.text" = "5";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "lZp-Ie-cM3"; */
+"lZp-Ie-cM3.title" = "Item";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "lbi-Vv-IVa"; */
+"lbi-Vv-IVa.text" = "4";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "lm2-e9-MIj"; */
+"lm2-e9-MIj.text" = "5";
+
+/* Class = "UILabel"; text = "Enter Your Password"; ObjectID = "mNg-So-QVt"; */
+"mNg-So-QVt.text" = "Enter Your Password";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "mbw-Xr-88C"; */
+"mbw-Xr-88C.placeholder" = "Enter title";
+
+/* Class = "UINavigationItem"; title = "Add Teams"; ObjectID = "mxS-ql-Lqv"; */
+"mxS-ql-Lqv.title" = "Add Teams";
+
+/* Class = "UILabel"; text = "Select Your Language"; ObjectID = "oSO-ag-rll"; */
+"oSO-ag-rll.text" = "Select Your Language";
+
+/* Class = "UIViewController"; title = "AboutUsViewController"; ObjectID = "odX-ee-l5L"; */
+"odX-ee-l5L.title" = "AboutUsViewController";
+
+/* Class = "UILabel"; text = "6 hrs"; ObjectID = "pVO-MM-7HI"; */
+"pVO-MM-7HI.text" = "6 hrs";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "pbV-cQ-dGF"; */
+"pbV-cQ-dGF.text" = "6";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "pnR-p1-995"; */
+"pnR-p1-995.text" = "8";
+
+/* Class = "UILabel"; text = "Raj kumar Patel"; ObjectID = "qIu-fp-6wU"; */
+"qIu-fp-6wU.text" = "Raj kumar Patel";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "qUg-I6-614"; */
+"qUg-I6-614.text" = "2";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "r18-5W-tyA"; */
+"r18-5W-tyA.text" = "6";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "r5B-ia-u3h"; */
+"r5B-ia-u3h.text" = "User One";
+
+/* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "r7a-qS-yGv"; */
+"r7a-qS-yGv.text" = "-> (2) November 26, 7:30 PM";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "rSJ-Ra-Igb"; */
+"rSJ-Ra-Igb.text" = "User One";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "rcG-pe-ll7"; */
+"rcG-pe-ll7.text" = "Last Name";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "sPH-AJ-ezq"; */
+"sPH-AJ-ezq.title" = "Settings";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "snM-8S-Z6b"; */
+"snM-8S-Z6b.text" = "5";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "swB-G3-KbK"; */
+"swB-G3-KbK.text" = "1";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "tIp-0q-MFP"; */
+"tIp-0q-MFP.title" = "Item";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "taf-yg-hVD"; */
+"taf-yg-hVD.text" = "6";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "uVl-dD-DOn"; */
+"uVl-dD-DOn.text" = "City";
+
+/* Class = "UIViewController"; title = "Dial Password"; ObjectID = "wAa-bz-tGI"; */
+"wAa-bz-tGI.title" = "Dial Password";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "wIU-5i-1uB"; */
+"wIU-5i-1uB.text" = "9";
+
+/* Class = "UILabel"; text = "Safe Mode"; ObjectID = "xII-TZ-07I"; */
+"xII-TZ-07I.text" = "Safe Mode";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "xL8-Tj-M1f"; */
+"xL8-Tj-M1f.text" = "User One";
+
+/* Class = "UITabBarItem"; title = "Dial"; ObjectID = "xTy-cG-mpO"; */
+"xTy-cG-mpO.title" = "Dial";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "xW1-Sv-jfS"; */
+"xW1-Sv-jfS.text" = "3";
+
+/* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "xoy-uQ-iBD"; */
+"xoy-uQ-iBD.text" = "-> (2) November 26, 7:30 PM";
+
+/* Class = "UILabel"; text = "User One"; ObjectID = "yQ7-9m-6fa"; */
+"yQ7-9m-6fa.text" = "User One";
+
+/* Class = "UIButton"; normalTitle = "CREATE PASSWORD"; ObjectID = "yaE-vi-bLO"; */
+"yaE-vi-bLO.normalTitle" = "CREATE PASSWORD";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "yrJ-uF-Q9o"; */
+"yrJ-uF-Q9o.placeholder" = "Enter title";
+
+/* Class = "UILabel"; text = "Appearence"; ObjectID = "zRL-i2-prc"; */
+"zRL-i2-prc.text" = "Appearence";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "zUN-N2-voP"; */
+"zUN-N2-voP.placeholder" = "Enter title";
+
+/* Class = "UINavigationItem"; title = "Contacts"; ObjectID = "zYm-c1-bL5"; */
+"zYm-c1-bL5.title" = "Contacts";
+
+/* Class = "UILabel"; text = "Contact"; ObjectID = "zbq-tz-REB"; */
+"zbq-tz-REB.text" = "Contact";
+
+/* Class = "UILabel"; text = "You can set a password that will be required when you log in on a new device"; ObjectID = "zpK-Pp-Zex"; */
+"zpK-Pp-Zex.text" = "You can set a password that will be required when you log in on a new device";
