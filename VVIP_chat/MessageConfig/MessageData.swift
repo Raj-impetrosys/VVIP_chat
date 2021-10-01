@@ -9,18 +9,21 @@ import Foundation
 import UIKit
 import CoreLocation
 
-struct MessageData {
+struct MessageData: Codable {
+    let roomId: String
+    let senderId: String
     let text: String
-    let isFirstUser: Bool
-    let image: imageData?
-    //    let contact: Array<String>?
+    var isFirstUser: Bool
+    let image: ImageData?
     let contact: ContactData?
-    let location: CLLocation?
+    let location: Location?
     let document: URL?
     let messageType: MessageType
     let time: String
     
-    init(text: String, isFirstUser: Bool, image: imageData?,contact: ContactData?, location: CLLocation?,document:URL?, messageType: MessageType, time: String) {
+    init(roomId: String, senderId: String,text: String, isFirstUser: Bool, image: ImageData?,contact: ContactData?, location: Location?,document:URL?, messageType: MessageType, time: String) {
+        self.roomId = roomId
+        self.senderId = senderId
         self.text = text
         self.isFirstUser = isFirstUser
         self.image = image
@@ -32,17 +35,17 @@ struct MessageData {
     }
 }
 
-struct ContactData{
+struct ContactData: Codable{
     let phones: Array<String>?
-    let image: UIImage?
+//    let image: UIImage?
 }
 
-struct imageData {
-    let image: UIImage?
+struct ImageData: Codable {
+    let image: String?
     let url: URL?
 }
 
-//struct videoData {
-//    let image: UIImage?
-//    let url: String?
-//}
+struct Location: Codable{
+    let latitude: Double?
+    let longitude: Double?
+}

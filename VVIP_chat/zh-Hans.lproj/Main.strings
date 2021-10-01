@@ -1,9 +1,9 @@
 
 /* Class = "UITabBarItem"; title = "Calls"; ObjectID = "00D-ld-pS1"; */
-"00D-ld-pS1.title" = "Calls";
+"00D-ld-pS1.title" = "通话";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "0b5-Ht-aCF"; */
-"0b5-Ht-aCF.placeholder" = "Password";
+"0b5-Ht-aCF.placeholder" = "密码";
 
 /* Class = "UILabel"; text = "User One"; ObjectID = "11B-C7-UYh"; */
 "11B-C7-UYh.text" = "User One";
@@ -21,7 +21,7 @@
 "1lm-pt-hfx.text" = "9.00 AM";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "1mF-jW-RqW"; */
-"1mF-jW-RqW.placeholder" = "Enter title";
+"1mF-jW-RqW.placeholder" = "输入标题";
 
 /* Class = "UILabel"; text = "9"; ObjectID = "2dk-EB-gJx"; */
 "2dk-EB-gJx.text" = "9";
@@ -36,22 +36,22 @@
 "3Rh-wy-h5a.title" = "Item";
 
 /* Class = "UILabel"; text = "Email"; ObjectID = "4zu-oQ-yXu"; */
-"4zu-oQ-yXu.text" = "Email";
+"4zu-oQ-yXu.text" = "电子邮件";
 
 /* Class = "UILabel"; text = "1"; ObjectID = "5Mo-Fu-CZR"; */
 "5Mo-Fu-CZR.text" = "1";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "5OZ-gp-DTC"; */
-"5OZ-gp-DTC.placeholder" = "Enter title";
+"5OZ-gp-DTC.placeholder" = "输入标题";
 
 /* Class = "UIViewController"; title = "SetPhotoVideoViewController"; ObjectID = "626-AX-VhT"; */
 "626-AX-VhT.title" = "SetPhotoVideoViewController";
 
 /* Class = "UILabel"; text = "Manage Accounts"; ObjectID = "6dn-eZ-KVS"; */
-"6dn-eZ-KVS.text" = "Manage Accounts";
+"6dn-eZ-KVS.text" = "管理帐户";
 
 /* Class = "UIViewController"; title = "Dial Player Code"; ObjectID = "77N-bj-4q4"; */
-"77N-bj-4q4.title" = "Dial Player Code";
+"77N-bj-4q4.title" = "拨号播放器代码";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "7Jh-Jj-Ggq"; */
 "7Jh-Jj-Ggq.title" = "Item";
@@ -60,22 +60,22 @@
 "7K5-Gq-o0J.text" = "7";
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "7dG-Oc-fcL"; */
-"7dG-Oc-fcL.title" = "Settings";
+"7dG-Oc-fcL.title" = "设置";
 
 /* Class = "UIViewController"; title = "Dial Number"; ObjectID = "7ft-RF-Tpj"; */
-"7ft-RF-Tpj.title" = "Dial Number";
+"7ft-RF-Tpj.title" = "拨号码";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "7w7-Bs-pfy"; */
-"7w7-Bs-pfy.placeholder" = "Password";
+"7w7-Bs-pfy.placeholder" = "密码";
 
 /* Class = "UILabel"; text = "9999"; ObjectID = "85E-um-Xcr"; */
 "85E-um-Xcr.text" = "9999";
 
 /* Class = "UILabel"; text = "Enter Server ID"; ObjectID = "8NQ-Nl-cW6"; */
-"8NQ-Nl-cW6.text" = "Enter Server ID";
+"8NQ-Nl-cW6.text" = "請輸入伺服ID";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "8YQ-XC-ZDZ"; */
-"8YQ-XC-ZDZ.placeholder" = "Enter title";
+"8YQ-XC-ZDZ.placeholder" = "输入标题";
 
 /* Class = "UILabel"; text = "User One"; ObjectID = "8li-P4-3x9"; */
 "8li-P4-3x9.text" = "User One";
@@ -87,13 +87,13 @@
 "9qb-Vf-GVx.text" = "9";
 
 /* Class = "UILabel"; text = "Time set"; ObjectID = "9za-Ts-urJ"; */
-"9za-Ts-urJ.text" = "Time set";
+"9za-Ts-urJ.text" = "时间设定";
 
 /* Class = "UITextField"; placeholder = "User Name"; ObjectID = "AAX-d8-n13"; */
-"AAX-d8-n13.placeholder" = "User Name";
+"AAX-d8-n13.placeholder" = "用户名";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "APh-E5-MeS"; */
-"APh-E5-MeS.placeholder" = "Enter title";
+"APh-E5-MeS.placeholder" = "输入标题";
 
 /* Class = "UILabel"; text = "User One"; ObjectID = "AVo-US-pu6"; */
 "AVo-US-pu6.text" = "User One";
@@ -105,7 +105,7 @@
 "B3C-lW-cWz.text" = "User One";
 
 /* Class = "UILabel"; text = "Doc Name"; ObjectID = "B7a-6q-L6s"; */
-"B7a-6q-L6s.text" = "Doc Name";
+"B7a-6q-L6s.text" = "文件名";
 
 /* Class = "UILabel"; text = "User One"; ObjectID = "BjI-g1-9Wc"; */
 "BjI-g1-9Wc.text" = "User One";
@@ -126,31 +126,31 @@
 "CqN-Ru-Po0.text" = "7";
 
 /* Class = "UILabel"; text = "Two-Step Verification"; ObjectID = "DGf-JD-jen"; */
-"DGf-JD-jen.text" = "Two-Step Verification";
+"DGf-JD-jen.text" = "两步验证";
 
 /* Class = "UITabBarItem"; title = "Dial"; ObjectID = "DS1-8o-Rgm"; */
-"DS1-8o-Rgm.title" = "Dial";
+"DS1-8o-Rgm.title" = "拨号";
 
 /* Class = "UILabel"; text = "2"; ObjectID = "Dir-HY-Anl"; */
 "Dir-HY-Anl.text" = "2";
 
 /* Class = "UITabBarItem"; title = "Dial"; ObjectID = "Dp6-4V-PVC"; */
-"Dp6-4V-PVC.title" = "Dial";
+"Dp6-4V-PVC.title" = "拨号";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "E4X-Hu-dwM"; */
-"E4X-Hu-dwM.placeholder" = "Enter title";
+"E4X-Hu-dwM.placeholder" = "输入标题";
 
 /* Class = "UIBarButtonItem"; title = "video"; ObjectID = "ERT-aC-Od7"; */
-"ERT-aC-Od7.title" = "video";
+"ERT-aC-Od7.title" = "视频";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "ERj-eh-gDD"; */
-"ERj-eh-gDD.text" = "Title";
+"ERj-eh-gDD.text" = "标题";
 
 /* Class = "UILabel"; text = "Block"; ObjectID = "EcZ-oi-UVe"; */
-"EcZ-oi-UVe.text" = "Block";
+"EcZ-oi-UVe.text" = "堵塞";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "Eed-zC-tmc"; */
-"Eed-zC-tmc.placeholder" = "Enter title";
+"Eed-zC-tmc.placeholder" = "输入标题";
 
 /* Class = "UILabel"; text = "PDF"; ObjectID = "EuK-sE-xX7"; */
 "EuK-sE-xX7.text" = "PDF";
@@ -174,19 +174,19 @@
 "HSH-6t-3gd.text" = "9.00 AM";
 
 /* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "HYL-RI-6BR"; */
-"HYL-RI-6BR.title" = "Save";
+"HYL-RI-6BR.title" = "节省";
 
 /* Class = "UILabel"; text = "6"; ObjectID = "I0d-80-5nK"; */
 "I0d-80-5nK.text" = "6";
 
 /* Class = "UILabel"; text = "Enter PIN"; ObjectID = "I7H-tV-xLX"; */
-"I7H-tV-xLX.text" = "Enter PIN";
+"I7H-tV-xLX.text" = "請輸入PIN碼";
 
 /* Class = "UIBarButtonItem"; title = "ellipsis"; ObjectID = "ILe-KS-nBK"; */
 "ILe-KS-nBK.title" = "ellipsis";
 
 /* Class = "UILabel"; text = "Current Login must use password lock"; ObjectID = "IxO-Fb-Q1k"; */
-"IxO-Fb-Q1k.text" = "Current Login must use password lock";
+"IxO-Fb-Q1k.text" = "当前登录必须使用密码锁";
 
 /* Class = "UILabel"; text = "9.00 AM"; ObjectID = "JSa-bb-jTb"; */
 "JSa-bb-jTb.text" = "9.00 AM";
@@ -201,7 +201,7 @@
 "KIg-lB-B7M.title" = "Chat View Controller";
 
 /* Class = "UILabel"; text = "Off >"; ObjectID = "KNl-7b-OVi"; */
-"KNl-7b-OVi.text" = "Off >";
+"KNl-7b-OVi.text" = "关闭 >";
 
 /* Class = "UILabel"; text = "User One"; ObjectID = "KbA-l4-vEV"; */
 "KbA-l4-vEV.text" = "User One";
@@ -210,10 +210,10 @@
 "L6J-bc-WL6.text" = "8";
 
 /* Class = "UILabel"; text = "None >"; ObjectID = "LT8-Sj-KYU"; */
-"LT8-Sj-KYU.text" = "None >";
+"LT8-Sj-KYU.text" = "无 >";
 
 /* Class = "UINavigationItem"; title = "About Us"; ObjectID = "Lgq-WU-uyL"; */
-"Lgq-WU-uyL.title" = "About Us";
+"Lgq-WU-uyL.title" = "关于我们";
 
 /* Class = "UILabel"; text = "4"; ObjectID = "M7H-S1-ZVl"; */
 "M7H-S1-ZVl.text" = "4";
@@ -222,7 +222,7 @@
 "MRd-eG-CSP.text" = "User One";
 
 /* Class = "UILabel"; text = "Privacy and securities"; ObjectID = "MVb-js-vC4"; */
-"MVb-js-vC4.text" = "Privacy and securities";
+"MVb-js-vC4.text" = "隐私和安全";
 
 /* Class = "UILabel"; text = "1"; ObjectID = "MYh-CS-B7U"; */
 "MYh-CS-B7U.text" = "1";
@@ -240,7 +240,7 @@
 "Nv6-7x-x25.text" = "User One";
 
 /* Class = "UILabel"; text = "State"; ObjectID = "ONU-MZ-AgV"; */
-"ONU-MZ-AgV.text" = "State";
+"ONU-MZ-AgV.text" = "状态";
 
 /* Class = "UILabel"; text = "Blair Data"; ObjectID = "OS0-s2-cY0"; */
 "OS0-s2-cY0.text" = "Blair Data";
@@ -249,10 +249,10 @@
 "OUS-IM-NeF.text" = "User One";
 
 /* Class = "UINavigationItem"; title = "Edit Profile"; ObjectID = "OwK-cO-f86"; */
-"OwK-cO-f86.title" = "Edit Profile";
+"OwK-cO-f86.title" = "编辑个人资料";
 
 /* Class = "UILabel"; text = "This mode is On for entering 3 times incorrect password, the messages all clear"; ObjectID = "P13-j9-vSO"; */
-"P13-j9-vSO.text" = "This mode is On for entering 3 times incorrect password, the messages all clear";
+"P13-j9-vSO.text" = "输入3次错误密码时开启此模式，信息全部清除";
 
 /* Class = "UIBarButtonItem"; title = "edit"; ObjectID = "P5g-vS-6hD"; */
 "P5g-vS-6hD.title" = "edit";
@@ -261,7 +261,7 @@
 "PIQ-0B-wVm.title" = "Item";
 
 /* Class = "UILabel"; text = "Set a new photo or video"; ObjectID = "PKj-w9-a4H"; */
-"PKj-w9-a4H.text" = "Set a new photo or video";
+"PKj-w9-a4H.text" = "设置新照片或视频";
 
 /* Class = "UILabel"; text = "Lorium ipsum dolor emet"; ObjectID = "Pt8-0s-ti5"; */
 "Pt8-0s-ti5.text" = "Lorium ipsum dolor emet";
@@ -276,10 +276,10 @@
 "QQj-fF-lB7.text" = "0";
 
 /* Class = "UINavigationItem"; title = "Privacy And Securities"; ObjectID = "Qeo-LE-2g5"; */
-"Qeo-LE-2g5.title" = "Privacy And Securities";
+"Qeo-LE-2g5.title" = "隐私和安全";
 
 /* Class = "UILabel"; text = "Mute notifications"; ObjectID = "QgR-8e-o6U"; */
-"QgR-8e-o6U.text" = "Mute notifications";
+"QgR-8e-o6U.text" = "静音通知";
 
 /* Class = "UILabel"; text = "4"; ObjectID = "RL6-1Z-qqF"; */
 "RL6-1Z-qqF.text" = "4";
@@ -312,19 +312,19 @@
 "Spl-fN-M4T.text" = "7";
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "TFy-ZF-q7D"; */
-"TFy-ZF-q7D.title" = "Settings";
+"TFy-ZF-q7D.title" = "设置";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "TJe-Nu-xXW"; */
 "TJe-Nu-xXW.title" = "Item";
 
 /* Class = "UILabel"; text = "Add Numbers"; ObjectID = "TNT-P7-pk4"; */
-"TNT-P7-pk4.text" = "Add Numbers";
+"TNT-P7-pk4.text" = "添加数字";
 
 /* Class = "UITabBarItem"; title = "Friends"; ObjectID = "TmF-WX-SE0"; */
-"TmF-WX-SE0.title" = "Friends";
+"TmF-WX-SE0.title" = "朋友们";
 
 /* Class = "UILabel"; text = "Country"; ObjectID = "U9S-XD-gcb"; */
-"U9S-XD-gcb.text" = "Country";
+"U9S-XD-gcb.text" = "国家";
 
 /* Class = "UILabel"; text = "6"; ObjectID = "UHe-jf-Ile"; */
 "UHe-jf-Ile.text" = "6";
@@ -333,7 +333,7 @@
 "URY-lk-K59.text" = "9.00 AM";
 
 /* Class = "UILabel"; text = "First Name"; ObjectID = "UYE-Tu-YKc"; */
-"UYE-Tu-YKc.text" = "First Name";
+"UYE-Tu-YKc.text" = "名";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "UeU-cE-08o"; */
 "UeU-cE-08o.text" = "0";
@@ -348,19 +348,19 @@
 "V9B-Wl-hYd.text" = "8.3 kB";
 
 /* Class = "UITextField"; placeholder = "Type a message"; ObjectID = "VIG-fJ-lyv"; */
-"VIG-fJ-lyv.placeholder" = "Type a message";
+"VIG-fJ-lyv.placeholder" = "输入消息";
 
 /* Class = "UITabBarItem"; title = "Dial"; ObjectID = "VRa-cW-JYy"; */
-"VRa-cW-JYy.title" = "Dial";
+"VRa-cW-JYy.title" = "撥號";
 
 /* Class = "UILabel"; text = "Enter Player Code"; ObjectID = "VSs-Qc-m11"; */
-"VSs-Qc-m11.text" = "Enter Player Code";
+"VSs-Qc-m11.text" = "請輸入編碼";
 
 /* Class = "UILabel"; text = "Next"; ObjectID = "VYy-14-sbw"; */
-"VYy-14-sbw.text" = "Next";
+"VYy-14-sbw.text" = "下一步";
 
 /* Class = "UILabel"; text = "text message"; ObjectID = "W4K-Y4-VAu"; */
-"W4K-Y4-VAu.text" = "text message";
+"W4K-Y4-VAu.text" = "短信";
 
 /* Class = "UILabel"; text = "User One"; ObjectID = "W9Y-VJ-oLJ"; */
 "W9Y-VJ-oLJ.text" = "User One";
@@ -369,13 +369,13 @@
 "WDc-Vl-pWk.text" = "8";
 
 /* Class = "UINavigationItem"; title = "Language"; ObjectID = "X08-e3-o8Z"; */
-"X08-e3-o8Z.title" = "Language";
+"X08-e3-o8Z.title" = "语";
 
 /* Class = "UILabel"; text = "User One"; ObjectID = "XXn-iT-uJD"; */
 "XXn-iT-uJD.text" = "User One";
 
 /* Class = "UILabel"; text = "Password Lock"; ObjectID = "Yp6-Pf-7Iw"; */
-"Yp6-Pf-7Iw.text" = "Password Lock";
+"Yp6-Pf-7Iw.text" = "密码锁";
 
 /* Class = "UILabel"; text = "7"; ObjectID = "ZBT-cy-y6b"; */
 "ZBT-cy-y6b.text" = "7";
@@ -384,19 +384,19 @@
 "aGD-on-U69.title" = "Chat User Table View Controller";
 
 /* Class = "UILabel"; text = "Language"; ObjectID = "aLd-Id-RKV"; */
-"aLd-Id-RKV.text" = "Language";
+"aLd-Id-RKV.text" = "语";
 
 /* Class = "UILabel"; text = "About and Phone Number"; ObjectID = "bg7-CI-6la"; */
-"bg7-CI-6la.text" = "About and Phone Number";
+"bg7-CI-6la.text" = "关于和电话号码";
 
 /* Class = "UILabel"; text = "Zip"; ObjectID = "boU-An-8lh"; */
-"boU-An-8lh.text" = "Zip";
+"boU-An-8lh.text" = "压缩";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "brX-g8-crN"; */
 "brX-g8-crN.title" = "Item";
 
 /* Class = "UILabel"; text = "About us"; ObjectID = "c43-Gb-Ydu"; */
-"c43-Gb-Ydu.text" = "About us";
+"c43-Gb-Ydu.text" = "关于我们";
 
 /* Class = "UILabel"; text = "-> (2) November 26, 7:30 PM"; ObjectID = "c4Z-qV-zvr"; */
 "c4Z-qV-zvr.text" = "-> (2) November 26, 7:30 PM";
@@ -405,19 +405,19 @@
 "c7S-dd-oeg.text" = "中国人";
 
 /* Class = "UIViewController"; title = "Dial Pin"; ObjectID = "cQC-j1-Dgt"; */
-"cQC-j1-Dgt.title" = "Dial Pin";
+"cQC-j1-Dgt.title" = "拨号针";
 
 /* Class = "UILabel"; text = "8"; ObjectID = "cjd-MB-dRM"; */
 "cjd-MB-dRM.text" = "8";
 
 /* Class = "UIViewController"; title = "Dial Server ID"; ObjectID = "dFX-2k-mjj"; */
-"dFX-2k-mjj.title" = "Dial Server ID";
+"dFX-2k-mjj.title" = "拨号服务器 ID";
 
 /* Class = "UILabel"; text = "\"PIN\""; ObjectID = "dHP-St-b9E"; */
-"dHP-St-b9E.text" = "\"PIN\"";
+"dHP-St-b9E.text" = "\"别针\"";
 
 /* Class = "UINavigationItem"; title = "Contacts"; ObjectID = "ddN-lc-myK"; */
-"ddN-lc-myK.title" = "Contacts";
+"ddN-lc-myK.title" = "联系人";
 
 /* Class = "UILabel"; text = "3"; ObjectID = "dgO-iu-Md4"; */
 "dgO-iu-Md4.text" = "3";
@@ -429,10 +429,10 @@
 "dyW-gU-JNb.text" = "405";
 
 /* Class = "UIBarButtonItem"; title = "menu"; ObjectID = "e3O-9Z-sT4"; */
-"e3O-9Z-sT4.title" = "menu";
+"e3O-9Z-sT4.title" = "菜单";
 
 /* Class = "UIButton"; normalTitle = "Change Theme"; ObjectID = "e8q-hM-ebc"; */
-"e8q-hM-ebc.normalTitle" = "Change Theme";
+"e8q-hM-ebc.normalTitle" = "改变主题";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "eKK-LK-dAk"; */
 "eKK-LK-dAk.title" = "Item";
@@ -441,7 +441,7 @@
 "ems-qm-azY.text" = "Network Link";
 
 /* Class = "UIBarButtonItem"; title = "call"; ObjectID = "ex5-Em-Rn6"; */
-"ex5-Em-Rn6.title" = "call";
+"ex5-Em-Rn6.title" = "称呼";
 
 /* Class = "UILabel"; text = "3"; ObjectID = "f4B-io-646"; */
 "f4B-io-646.text" = "3";
@@ -453,7 +453,7 @@
 "faf-dh-Mhj.text" = "User One";
 
 /* Class = "UILabel"; text = "Blocked user"; ObjectID = "fnC-Z6-N9S"; */
-"fnC-Z6-N9S.text" = "Blocked user";
+"fnC-Z6-N9S.text" = "被阻止的用户";
 
 /* Class = "UIViewController"; title = "ManageAccountViewController"; ObjectID = "gGn-Ws-eWZ"; */
 "gGn-Ws-eWZ.title" = "ManageAccountViewController";
@@ -462,28 +462,28 @@
 "gIp-Th-C8g.text" = "9.00 AM";
 
 /* Class = "UILabel"; text = "Pre-set time burning"; ObjectID = "gJQ-38-UlW"; */
-"gJQ-38-UlW.text" = "Pre-set time burning";
+"gJQ-38-UlW.text" = "预设时间燃烧";
 
 /* Class = "UILabel"; text = "9"; ObjectID = "gRk-09-mj2"; */
 "gRk-09-mj2.text" = "9";
 
 /* Class = "UITabBarItem"; title = "Chat"; ObjectID = "gg0-oT-TDh"; */
-"gg0-oT-TDh.title" = "Chat";
+"gg0-oT-TDh.title" = "聊天";
 
 /* Class = "UILabel"; text = "Designation"; ObjectID = "gp1-Ep-aGe"; */
-"gp1-Ep-aGe.text" = "Designation";
+"gp1-Ep-aGe.text" = "指定";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "h0q-9p-BsZ"; */
 "h0q-9p-BsZ.title" = "Item";
 
 /* Class = "UILabel"; text = "Logout"; ObjectID = "h5x-UP-tZX"; */
-"h5x-UP-tZX.text" = "Logout";
+"h5x-UP-tZX.text" = "登出";
 
 /* Class = "UILabel"; text = "10:55 AM"; ObjectID = "hgB-7C-PHs"; */
 "hgB-7C-PHs.text" = "10:55 AM";
 
 /* Class = "UINavigationItem"; title = "Appearence"; ObjectID = "i8b-TZ-A6N"; */
-"i8b-TZ-A6N.title" = "Appearence";
+"i8b-TZ-A6N.title" = "外观";
 
 /* Class = "UILabel"; text = "4"; ObjectID = "iJw-aA-PgN"; */
 "iJw-aA-PgN.text" = "4";
@@ -516,22 +516,22 @@
 "lm2-e9-MIj.text" = "5";
 
 /* Class = "UILabel"; text = "Enter Your Password"; ObjectID = "mNg-So-QVt"; */
-"mNg-So-QVt.text" = "Enter Your Password";
+"mNg-So-QVt.text" = "請輸入密碼";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "mbw-Xr-88C"; */
-"mbw-Xr-88C.placeholder" = "Enter title";
+"mbw-Xr-88C.placeholder" = "输入标题";
 
 /* Class = "UINavigationItem"; title = "Add Teams"; ObjectID = "mxS-ql-Lqv"; */
-"mxS-ql-Lqv.title" = "Add Teams";
+"mxS-ql-Lqv.title" = "添加团队";
 
 /* Class = "UILabel"; text = "Select Your Language"; ObjectID = "oSO-ag-rll"; */
-"oSO-ag-rll.text" = "Select Your Language";
+"oSO-ag-rll.text" = "选择你的语言";
 
 /* Class = "UIViewController"; title = "AboutUsViewController"; ObjectID = "odX-ee-l5L"; */
 "odX-ee-l5L.title" = "AboutUsViewController";
 
 /* Class = "UILabel"; text = "6 hrs"; ObjectID = "pVO-MM-7HI"; */
-"pVO-MM-7HI.text" = "6 hrs";
+"pVO-MM-7HI.text" = "6 小时";
 
 /* Class = "UILabel"; text = "6"; ObjectID = "pbV-cQ-dGF"; */
 "pbV-cQ-dGF.text" = "6";
@@ -558,10 +558,10 @@
 "rSJ-Ra-Igb.text" = "User One";
 
 /* Class = "UILabel"; text = "Last Name"; ObjectID = "rcG-pe-ll7"; */
-"rcG-pe-ll7.text" = "Last Name";
+"rcG-pe-ll7.text" = "姓";
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "sPH-AJ-ezq"; */
-"sPH-AJ-ezq.title" = "Settings";
+"sPH-AJ-ezq.title" = "设置";
 
 /* Class = "UILabel"; text = "5"; ObjectID = "snM-8S-Z6b"; */
 "snM-8S-Z6b.text" = "5";
@@ -576,22 +576,22 @@
 "taf-yg-hVD.text" = "6";
 
 /* Class = "UILabel"; text = "City"; ObjectID = "uVl-dD-DOn"; */
-"uVl-dD-DOn.text" = "City";
+"uVl-dD-DOn.text" = "城市";
 
 /* Class = "UIViewController"; title = "Dial Password"; ObjectID = "wAa-bz-tGI"; */
-"wAa-bz-tGI.title" = "Dial Password";
+"wAa-bz-tGI.title" = "拨密码";
 
 /* Class = "UILabel"; text = "9"; ObjectID = "wIU-5i-1uB"; */
 "wIU-5i-1uB.text" = "9";
 
 /* Class = "UILabel"; text = "Safe Mode"; ObjectID = "xII-TZ-07I"; */
-"xII-TZ-07I.text" = "Safe Mode";
+"xII-TZ-07I.text" = "安全模式";
 
 /* Class = "UILabel"; text = "User One"; ObjectID = "xL8-Tj-M1f"; */
 "xL8-Tj-M1f.text" = "User One";
 
 /* Class = "UITabBarItem"; title = "Dial"; ObjectID = "xTy-cG-mpO"; */
-"xTy-cG-mpO.title" = "Dial";
+"xTy-cG-mpO.title" = "拨号";
 
 /* Class = "UILabel"; text = "3"; ObjectID = "xW1-Sv-jfS"; */
 "xW1-Sv-jfS.text" = "3";
@@ -603,22 +603,22 @@
 "yQ7-9m-6fa.text" = "User One";
 
 /* Class = "UIButton"; normalTitle = "CREATE PASSWORD"; ObjectID = "yaE-vi-bLO"; */
-"yaE-vi-bLO.normalTitle" = "CREATE PASSWORD";
+"yaE-vi-bLO.normalTitle" = "创建密码";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "yrJ-uF-Q9o"; */
-"yrJ-uF-Q9o.placeholder" = "Enter title";
+"yrJ-uF-Q9o.placeholder" = "输入标题";
 
 /* Class = "UILabel"; text = "Appearence"; ObjectID = "zRL-i2-prc"; */
-"zRL-i2-prc.text" = "Appearence";
+"zRL-i2-prc.text" = "外观";
 
 /* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "zUN-N2-voP"; */
-"zUN-N2-voP.placeholder" = "Enter title";
+"zUN-N2-voP.placeholder" = "输入标题";
 
 /* Class = "UINavigationItem"; title = "Contacts"; ObjectID = "zYm-c1-bL5"; */
-"zYm-c1-bL5.title" = "Contacts";
+"zYm-c1-bL5.title" = "联系人";
 
 /* Class = "UILabel"; text = "Contact"; ObjectID = "zbq-tz-REB"; */
-"zbq-tz-REB.text" = "Contact";
+"zbq-tz-REB.text" = "接触";
 
 /* Class = "UILabel"; text = "You can set a password that will be required when you log in on a new device"; ObjectID = "zpK-Pp-Zex"; */
-"zpK-Pp-Zex.text" = "You can set a password that will be required when you log in on a new device";
+"zpK-Pp-Zex.text" = "您可以设置在新设备上登录时需要的密码";

@@ -8,17 +8,7 @@
 import Foundation
 import UIKit
 
-//enum MessageType{
-//    var text,
-//    var image,
-//    var audio,
-//    video,
-//    emoji,
-//    media,
-//
-//}
-
-public enum MessageType {
+public enum MessageType: String, Codable {
     case text
     case attributedText
     case image

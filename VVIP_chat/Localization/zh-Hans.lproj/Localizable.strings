@@ -5,3 +5,59 @@
   Created by mac on 29/09/21.
   
 */
+//Chat view Controller
+"Reply"="回复";
+"Copy" = "复制";
+"Forward" = "向前";
+"Delete" = "删除";
+
+"Search" = "搜索";
+"New Group" = "新组";
+"New Broadcast" = "新的广播";
+"Setting" = "环境";
+
+"View Contact" = "查看联系方式";
+"Mute Notifications" = "静音通知";
+"Clear Chat" = "清除聊天";
+"Block" = "堵塞";
+
+//Settings-> Manage Accounts
+"Password" = "密码";
+"Re-Enter Password" = "重新输入密码";
+"Notification" = "通知";
+"Logout" = "登出";
+
+//Setting-> Edit Profile
+"Enter Title" = "输入标题";
+"Enter designation" = "输入名称";
+"Enter first name" = "输入名字";
+"Enter last name" = "输入姓氏";
+"Enter email" = "输入电子邮件";
+"Enter country" = "输入国家";
+"Enter state" = "进入状态";
+"Enter city" = "输入城市";
+"Enter zip" = "输入邮编";
+
+//Setting-> Logout
+"Do you want to logout?" = "你想退出吗？";
+"Alert" = "警报";
+"No" = "不";
+"Yes" = "是的";
+
+//All settings
+"Enter server ID" = "請輸入伺服ID";
+"Enter Pin" = "請輸入PIN碼";
+"Enter player code" = "請輸入編碼";
+"Set New Photo or video" = "新增圖片或影片";
+"Name" = "名稱";
+"Next" = "下一步";
+"Enter password" = "請輸入密碼";
+"open gallery" = "相簿";
+"search web" = "瀏覽網路";
+"remove photo" = "移除相片";
+"cancel" = "取消";
+"dial" = "撥號";
+"friends" = "好友";
+"calls" = "通話紀錄";
+"chat" = "聊天";
+"setting" = "設定";

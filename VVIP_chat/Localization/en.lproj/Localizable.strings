@@ -5,3 +5,59 @@
   Created by mac on 29/09/21.
   
 */
+//Chat view Controller
+"Reply" = "Reply";
+"Copy" = "Copy";
+"Forward" = "Forward";
+"Delete" = "Delete";
+
+"Search" = "Search";
+"New Group" = "New Group";
+"New Broadcast" = "New Broadcast";
+"Setting" = "Setting";
+
+"View Contact" = "View Contact";
+"Mute Notifications" = "Mute Notifications";
+"Clear Chat" = "Clear Chat";
+"Block" = "Block";
+
+//Settings-> Manage Accounts
+"Password" = "Password";
+"Re-Enter Password" = "Re-Enter Password";
+"Notification" = "Notification";
+"Logout" = "Logout";
+
+//Setting-> Edit Profile
+"Enter Title" = "Enter Title";
+"Enter designation" = "Enter designation";
+"Enter first name" = "Enter first name";
+"Enter last name" = "Enter last name";
+"Enter email" = "Enter email";
+"Enter country" = "Enter country";
+"Enter state" = "Enter state";
+"Enter city" = "Enter city";
+"Enter zip" = "Enter zip";
+
+//Setting-> Logout
+"Do you want to logout?" = "Do you want to logout?";
+"Alert" = "Alert";
+"No" = "No";
+"Yes" = "Yes";
+
+//All settings
+"Enter server ID" = "Enter server ID";
+"Enter Pin" = "Enter Pin";
+"Enter player code" = "Enter player code";
+"Set New Photo or video" = "Set New Photo or video";
+"Name" = "Name";
+"Next" = "Next";
+"Enter password" = "Enter password";
+"open gallery" = "open gallery";
+"search web" = "search web";
+"remove photo" = "remove photo";
+"cancel" = "cancel";
+"dial" = "dial";
+"friends" = "friends";
+"calls" = "calls";
+"chat" = "chat";
+"setting" = "setting";
